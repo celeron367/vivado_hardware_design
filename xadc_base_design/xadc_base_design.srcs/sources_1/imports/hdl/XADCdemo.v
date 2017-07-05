@@ -80,6 +80,15 @@ module XADCdemo(
         .channel_out (channel_out),
         .drdy_out    (ready)
     );
+   //------------ila core------------------
+    ila_0 myila(
+            .clk(clk),
+            .probe0(Address_in),
+            .probe1(enable),
+            .probe2(data),
+            .probe3(channel_out),
+            .probe4(ready)
+         );
                      
 
                                   

@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Jul  5 15:24:57 2017
+# Process ID: 12848
+# Current directory: E:/vivado_hardware_design/xadc_base_design
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13044 E:\vivado_hardware_design\xadc_base_design\xadc_base_design.xpr
+# Log file: E:/vivado_hardware_design/xadc_base_design/vivado.log
+# Journal file: E:/vivado_hardware_design/xadc_base_design\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/vivado_hardware_design/xadc_base_design/xadc_base_design.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+write_checkpoint E:/vivado_hardware_design/xadc_base_design/checkpoint_1.dcp -force
