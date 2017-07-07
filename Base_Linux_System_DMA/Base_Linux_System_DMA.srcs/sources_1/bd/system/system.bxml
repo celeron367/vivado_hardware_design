@@ -2,13 +2,13 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1499340958"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1499340958"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1499340958"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1499411325"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1499411325"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1499411325"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\system_BTNs_4Bits_0\system_BTNs_4Bits_0.xci" Type="IP">
         <Instance HierarchyPath="BTNs_4Bits"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1498544470" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1498618561" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -16,7 +16,7 @@
       </File>
       <File Name="ip\system_LEDs_4Bits_1\system_LEDs_4Bits_1.xci" Type="IP">
         <Instance HierarchyPath="LEDs_4Bits"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1498544470" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1498618561" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -24,7 +24,7 @@
       </File>
       <File Name="ip\system_SWs_4Bits_2\system_SWs_4Bits_2.xci" Type="IP">
         <Instance HierarchyPath="SWs_4Bits"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1498544470" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1498618561" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -32,7 +32,7 @@
       </File>
       <File Name="ip\system_processing_system7_0_0\system_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1498549609" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1499335536" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -40,7 +40,7 @@
       </File>
       <File Name="ip\system_processing_system7_0_axi_periph_2\system_processing_system7_0_axi_periph_2.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0_axi_periph"/>
-        <Properties IsEditable="false" IsVisible="false" Timestamp="1498549609" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1499329360" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -48,7 +48,7 @@
       </File>
       <File Name="ip\system_axi_dma_0_0\system_axi_dma_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_dma_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="1498548490" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1499335510" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -56,7 +56,7 @@
       </File>
       <File Name="ip\system_axi_mem_intercon_3\system_axi_mem_intercon_3.xci" Type="IP">
         <Instance HierarchyPath="axi_mem_intercon"/>
-        <Properties IsEditable="false" IsVisible="false" Timestamp="1498549609" IsTrackable="true" IsStatusTracked="false"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1499335510" IsTrackable="true" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -64,7 +64,7 @@
       </File>
       <File Name="ip\system_xbar_1\system_xbar_1.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0_axi_periph/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1499329361" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -72,7 +72,7 @@
       </File>
       <File Name="ip\system_xbar_0\system_xbar_0.xci" Type="IP">
         <Instance HierarchyPath="axi_mem_intercon/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1499335538" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -80,7 +80,7 @@
       </File>
       <File Name="ip\system_system_ila_0_2\system_system_ila_0_2.xci" Type="IP">
         <Instance HierarchyPath="system_ila_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1499335537" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -88,7 +88,7 @@
       </File>
       <File Name="ip\system_rst_ps7_0_100M_0\system_rst_ps7_0_100M_0.xci" Type="IP">
         <Instance HierarchyPath="rst_ps7_0_100M"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1499329361" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -96,7 +96,7 @@
       </File>
       <File Name="ip\system_axis_data_fifo_0_0\system_axis_data_fifo_0_0.xci" Type="IP">
         <Instance HierarchyPath="axis_data_fifo_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1499329825" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>

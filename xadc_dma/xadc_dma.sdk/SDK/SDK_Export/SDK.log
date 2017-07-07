@@ -1,0 +1,68 @@
+15:11:01.220 INFO  - Processing command line option -hwspec E:/zybo_base_system/source/vivado/hw/zybo_bsd/zybo_bsd.sdk/SDK/SDK_Export/hw/system.xml. 
+14:35:15.234 INFO  - Processing command line option -hwspec E:/zybo_base_system3/project_2/project_2.sdk/SDK/SDK_Export/hw/system.xml. 
+14:35:17.083 INFO  - The hardware specification for project 'hw_platform_0' is different from E:/zybo_base_system3/project_2/project_2.sdk/SDK/SDK_Export/hw/system.xml. 
+14:35:17.133 INFO  - Copied contents of E:/zybo_base_system3/project_2/project_2.sdk/SDK/SDK_Export/hw/system.xml into \hw_platform_0\system.xml. 
+14:35:17.136 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw\system_wrapper.bit into \hw_platform_0\system_wrapper.bit. 
+14:35:25.461 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw\ps7_init.c into \hw_platform_0\ps7_init.c. 
+14:35:25.475 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw\ps7_init.h into \hw_platform_0\ps7_init.h. 
+14:35:25.479 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw\ps7_init.html into \hw_platform_0\ps7_init.html. 
+14:35:25.479 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw\ps7_summary.html into \hw_platform_0\ps7_summary.html. 
+14:35:25.480 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw\ps7_init.tcl into \hw_platform_0\ps7_init.tcl. 
+14:35:25.943 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+14:35:28.395 INFO  - Updating MSS for Board Support Package Project: fsbl_bsp.
+		 The following driver assignments were removed:
+			Peripheral Instance: axi_dispctrl_0, driver: generic_v1_00_a.
+			Peripheral Instance: axi_dispctrl_1, driver: generic_v1_00_a.
+			Peripheral Instance: axi_i2s_adi_1, driver: generic_v1_00_a.
+			Peripheral Instance: axi_vdma_0, driver: axivdma_v4_06_a.
+			Peripheral Instance: axi_vdma_1, driver: axivdma_v4_06_a.
+ 
+14:35:50.082 INFO  - Updating hardware inferred compiler options for fsbl. 
+14:35:50.089 INFO  - Clearing existing target manager status. 
+14:35:53.390 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw_platform_0\ps7_init.c into \fsbl\src\ps7_init.c. 
+14:35:53.394 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw_platform_0\ps7_init.h into \fsbl\src\ps7_init.h. 
+14:35:53.401 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw_platform_0\ps7_init.html into \fsbl\src\ps7_init.html. 
+14:35:53.402 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw_platform_0\ps7_summary.html into \fsbl\src\ps7_summary.html. 
+14:35:53.403 INFO  - Copied contents of E:\zybo_base_system3\project_2\project_2.sdk\SDK\SDK_Export\hw_platform_0\ps7_init.tcl into \fsbl\src\ps7_init.tcl. 
+14:40:38.863 INFO  - Saving repository preferences. 
+14:40:38.871 INFO  - Reading in cores from global repositories: 
+		 E:\Xilinx\SDK\2013.4\sw\lib\bsp\device-tree-xlnx 
+14:40:38.926 INFO  - Reading in cores from local repositories: 
+		 E:\Xilinx\SDK\2013.4\sw\lib\bsp\device-tree-xlnx
+		 .\hw_platform_0 
+14:40:38.960 INFO  - Updating libgen.options on all BSP projects. 
+14:40:38.960 INFO  - Cleaning BSP projects in the workspace. 
+14:40:40.173 INFO  - Saving repository preferences. 
+14:40:40.174 INFO  - Reading in cores from local repositories: 
+		 E:\Xilinx\SDK\2013.4\sw\lib\bsp\device-tree-xlnx
+		 .\hw_platform_0 
+14:40:40.226 INFO  - Updating libgen.options on all BSP projects. 
+14:40:40.226 INFO  - Cleaning BSP projects in the workspace. 
+14:43:53.424 INFO  - Saving repository preferences. 
+14:43:53.427 INFO  - Reading in cores from global repositories: 
+		 E:\Xilinx\SDK\2013.4\sw\lib\bsp\device-tree-xlnx 
+14:43:53.469 INFO  - Reading in cores from local repositories: 
+		 E:\Xilinx\SDK\2013.4\sw\lib\bsp 
+14:43:53.484 INFO  - Updating libgen.options on all BSP projects. 
+14:43:53.485 INFO  - Cleaning BSP projects in the workspace. 
+14:43:54.783 INFO  - Saving repository preferences. 
+14:43:56.703 INFO  - Saving repository preferences. 
+14:43:59.150 INFO  - Saving repository preferences. 
+15:05:08.925 INFO  - Invoking Bootgen:  
+15:05:10.361 INFO  - Bootgen command execution is done. 
+16:37:58.879 INFO  - Saving repository preferences. 
+16:37:58.923 INFO  - Updating libgen.options on all BSP projects. 
+16:37:58.933 INFO  - Cleaning BSP projects in the workspace. 
+16:43:16.407 INFO  - Saving repository preferences. 
+16:43:16.409 INFO  - Reading in cores from local repositories: 
+		 E:\Xilinx\SDK\2013.4\sw\lib\bsp
+		 E:\Xilinx\SDK\2013.4\sw\ThirdParty\bsp 
+16:43:16.756 INFO  - Updating libgen.options on all BSP projects. 
+16:43:16.756 INFO  - Cleaning BSP projects in the workspace. 
+16:43:17.896 INFO  - Saving repository preferences. 
+16:43:37.011 INFO  - Saving repository preferences. 
+10:09:40.748 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+10:09:41.447 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
