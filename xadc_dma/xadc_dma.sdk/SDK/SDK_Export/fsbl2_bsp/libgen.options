@@ -1,3 +1,0 @@
-PROCESSOR=ps7_cortexa9_0
-REPOSITORIES=-lp E:/Xilinx/SDK/2013.4/sw/lib/bsp -lp E:/Xilinx/SDK/2013.4/sw/ThirdParty/bsp
-HWSPEC=../hw_platform_0/system.xml

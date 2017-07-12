@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Fri Jul  7 15:08:38 2017
+//Date        : Tue Jul 11 09:56:09 2017
 //Host        : win-PC running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target bd_1439_wrapper.bd
 //Design      : bd_1439_wrapper
@@ -54,12 +54,12 @@ module bd_1439_wrapper
     SLOT_1_AXI_wstrb,
     SLOT_1_AXI_wvalid,
     SLOT_2_AXIS_tdata,
-    SLOT_2_AXIS_tkeep,
+    SLOT_2_AXIS_tid,
     SLOT_2_AXIS_tlast,
     SLOT_2_AXIS_tready,
     SLOT_2_AXIS_tvalid,
     SLOT_3_AXIS_tdata,
-    SLOT_3_AXIS_tkeep,
+    SLOT_3_AXIS_tid,
     SLOT_3_AXIS_tlast,
     SLOT_3_AXIS_tready,
     SLOT_3_AXIS_tvalid,
@@ -82,6 +82,25 @@ module bd_1439_wrapper
     SLOT_4_AXI_wready,
     SLOT_4_AXI_wstrb,
     SLOT_4_AXI_wvalid,
+    SLOT_5_AXI_araddr,
+    SLOT_5_AXI_arprot,
+    SLOT_5_AXI_arready,
+    SLOT_5_AXI_arvalid,
+    SLOT_5_AXI_awaddr,
+    SLOT_5_AXI_awprot,
+    SLOT_5_AXI_awready,
+    SLOT_5_AXI_awvalid,
+    SLOT_5_AXI_bready,
+    SLOT_5_AXI_bresp,
+    SLOT_5_AXI_bvalid,
+    SLOT_5_AXI_rdata,
+    SLOT_5_AXI_rready,
+    SLOT_5_AXI_rresp,
+    SLOT_5_AXI_rvalid,
+    SLOT_5_AXI_wdata,
+    SLOT_5_AXI_wready,
+    SLOT_5_AXI_wstrb,
+    SLOT_5_AXI_wvalid,
     clk,
     resetn);
   input [31:0]SLOT_0_AXI_araddr;
@@ -127,13 +146,13 @@ module bd_1439_wrapper
   input SLOT_1_AXI_wready;
   input [3:0]SLOT_1_AXI_wstrb;
   input SLOT_1_AXI_wvalid;
-  input [31:0]SLOT_2_AXIS_tdata;
-  input [3:0]SLOT_2_AXIS_tkeep;
+  input [15:0]SLOT_2_AXIS_tdata;
+  input [4:0]SLOT_2_AXIS_tid;
   input SLOT_2_AXIS_tlast;
   input SLOT_2_AXIS_tready;
   input SLOT_2_AXIS_tvalid;
-  input [31:0]SLOT_3_AXIS_tdata;
-  input [3:0]SLOT_3_AXIS_tkeep;
+  input [15:0]SLOT_3_AXIS_tdata;
+  input [4:0]SLOT_3_AXIS_tid;
   input SLOT_3_AXIS_tlast;
   input SLOT_3_AXIS_tready;
   input SLOT_3_AXIS_tvalid;
@@ -156,6 +175,25 @@ module bd_1439_wrapper
   input SLOT_4_AXI_wready;
   input [3:0]SLOT_4_AXI_wstrb;
   input SLOT_4_AXI_wvalid;
+  input [10:0]SLOT_5_AXI_araddr;
+  input [2:0]SLOT_5_AXI_arprot;
+  input SLOT_5_AXI_arready;
+  input SLOT_5_AXI_arvalid;
+  input [10:0]SLOT_5_AXI_awaddr;
+  input [2:0]SLOT_5_AXI_awprot;
+  input SLOT_5_AXI_awready;
+  input SLOT_5_AXI_awvalid;
+  input SLOT_5_AXI_bready;
+  input [1:0]SLOT_5_AXI_bresp;
+  input SLOT_5_AXI_bvalid;
+  input [31:0]SLOT_5_AXI_rdata;
+  input SLOT_5_AXI_rready;
+  input [1:0]SLOT_5_AXI_rresp;
+  input SLOT_5_AXI_rvalid;
+  input [31:0]SLOT_5_AXI_wdata;
+  input SLOT_5_AXI_wready;
+  input [3:0]SLOT_5_AXI_wstrb;
+  input SLOT_5_AXI_wvalid;
   input clk;
   input resetn;
 
@@ -202,13 +240,13 @@ module bd_1439_wrapper
   wire SLOT_1_AXI_wready;
   wire [3:0]SLOT_1_AXI_wstrb;
   wire SLOT_1_AXI_wvalid;
-  wire [31:0]SLOT_2_AXIS_tdata;
-  wire [3:0]SLOT_2_AXIS_tkeep;
+  wire [15:0]SLOT_2_AXIS_tdata;
+  wire [4:0]SLOT_2_AXIS_tid;
   wire SLOT_2_AXIS_tlast;
   wire SLOT_2_AXIS_tready;
   wire SLOT_2_AXIS_tvalid;
-  wire [31:0]SLOT_3_AXIS_tdata;
-  wire [3:0]SLOT_3_AXIS_tkeep;
+  wire [15:0]SLOT_3_AXIS_tdata;
+  wire [4:0]SLOT_3_AXIS_tid;
   wire SLOT_3_AXIS_tlast;
   wire SLOT_3_AXIS_tready;
   wire SLOT_3_AXIS_tvalid;
@@ -231,6 +269,25 @@ module bd_1439_wrapper
   wire SLOT_4_AXI_wready;
   wire [3:0]SLOT_4_AXI_wstrb;
   wire SLOT_4_AXI_wvalid;
+  wire [10:0]SLOT_5_AXI_araddr;
+  wire [2:0]SLOT_5_AXI_arprot;
+  wire SLOT_5_AXI_arready;
+  wire SLOT_5_AXI_arvalid;
+  wire [10:0]SLOT_5_AXI_awaddr;
+  wire [2:0]SLOT_5_AXI_awprot;
+  wire SLOT_5_AXI_awready;
+  wire SLOT_5_AXI_awvalid;
+  wire SLOT_5_AXI_bready;
+  wire [1:0]SLOT_5_AXI_bresp;
+  wire SLOT_5_AXI_bvalid;
+  wire [31:0]SLOT_5_AXI_rdata;
+  wire SLOT_5_AXI_rready;
+  wire [1:0]SLOT_5_AXI_rresp;
+  wire SLOT_5_AXI_rvalid;
+  wire [31:0]SLOT_5_AXI_wdata;
+  wire SLOT_5_AXI_wready;
+  wire [3:0]SLOT_5_AXI_wstrb;
+  wire SLOT_5_AXI_wvalid;
   wire clk;
   wire resetn;
 
@@ -279,12 +336,12 @@ module bd_1439_wrapper
         .SLOT_1_AXI_wstrb(SLOT_1_AXI_wstrb),
         .SLOT_1_AXI_wvalid(SLOT_1_AXI_wvalid),
         .SLOT_2_AXIS_tdata(SLOT_2_AXIS_tdata),
-        .SLOT_2_AXIS_tkeep(SLOT_2_AXIS_tkeep),
+        .SLOT_2_AXIS_tid(SLOT_2_AXIS_tid),
         .SLOT_2_AXIS_tlast(SLOT_2_AXIS_tlast),
         .SLOT_2_AXIS_tready(SLOT_2_AXIS_tready),
         .SLOT_2_AXIS_tvalid(SLOT_2_AXIS_tvalid),
         .SLOT_3_AXIS_tdata(SLOT_3_AXIS_tdata),
-        .SLOT_3_AXIS_tkeep(SLOT_3_AXIS_tkeep),
+        .SLOT_3_AXIS_tid(SLOT_3_AXIS_tid),
         .SLOT_3_AXIS_tlast(SLOT_3_AXIS_tlast),
         .SLOT_3_AXIS_tready(SLOT_3_AXIS_tready),
         .SLOT_3_AXIS_tvalid(SLOT_3_AXIS_tvalid),
@@ -307,6 +364,25 @@ module bd_1439_wrapper
         .SLOT_4_AXI_wready(SLOT_4_AXI_wready),
         .SLOT_4_AXI_wstrb(SLOT_4_AXI_wstrb),
         .SLOT_4_AXI_wvalid(SLOT_4_AXI_wvalid),
+        .SLOT_5_AXI_araddr(SLOT_5_AXI_araddr),
+        .SLOT_5_AXI_arprot(SLOT_5_AXI_arprot),
+        .SLOT_5_AXI_arready(SLOT_5_AXI_arready),
+        .SLOT_5_AXI_arvalid(SLOT_5_AXI_arvalid),
+        .SLOT_5_AXI_awaddr(SLOT_5_AXI_awaddr),
+        .SLOT_5_AXI_awprot(SLOT_5_AXI_awprot),
+        .SLOT_5_AXI_awready(SLOT_5_AXI_awready),
+        .SLOT_5_AXI_awvalid(SLOT_5_AXI_awvalid),
+        .SLOT_5_AXI_bready(SLOT_5_AXI_bready),
+        .SLOT_5_AXI_bresp(SLOT_5_AXI_bresp),
+        .SLOT_5_AXI_bvalid(SLOT_5_AXI_bvalid),
+        .SLOT_5_AXI_rdata(SLOT_5_AXI_rdata),
+        .SLOT_5_AXI_rready(SLOT_5_AXI_rready),
+        .SLOT_5_AXI_rresp(SLOT_5_AXI_rresp),
+        .SLOT_5_AXI_rvalid(SLOT_5_AXI_rvalid),
+        .SLOT_5_AXI_wdata(SLOT_5_AXI_wdata),
+        .SLOT_5_AXI_wready(SLOT_5_AXI_wready),
+        .SLOT_5_AXI_wstrb(SLOT_5_AXI_wstrb),
+        .SLOT_5_AXI_wvalid(SLOT_5_AXI_wvalid),
         .clk(clk),
         .resetn(resetn));
 endmodule

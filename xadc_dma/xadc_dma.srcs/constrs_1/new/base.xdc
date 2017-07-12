@@ -72,6 +72,27 @@ set_property PACKAGE_PIN M17 [get_ports {AC_SDATA_O[0]}]
 set_property PACKAGE_PIN K17 [get_ports AC_SDATA_I]
 set_property IOSTANDARD LVCMOS33 [get_ports AC*]
 
+#-----------------xadc analog in port---------------------------------
+set_property PACKAGE_PIN N16  [get_ports n1]
+set_property IOSTANDARD LVCMOS33 [get_ports n1]
+set_property PACKAGE_PIN N15  [get_ports p1]
+set_property IOSTANDARD LVCMOS33 [get_ports p1]
+set_property PACKAGE_PIN L15 [get_ports n2]
+set_property IOSTANDARD LVCMOS33 [get_ports n2]
+set_property PACKAGE_PIN L14 [get_ports p2]
+set_property IOSTANDARD LVCMOS33 [get_ports p2]
+set_property PACKAGE_PIN J16  [get_ports n3]
+set_property IOSTANDARD LVCMOS33 [get_ports n3]
+set_property PACKAGE_PIN K16  [get_ports p3]
+set_property IOSTANDARD LVCMOS33 [get_ports p3]
+set_property PACKAGE_PIN J14  [get_ports n4]
+set_property IOSTANDARD LVCMOS33  [get_ports n4]
+set_property PACKAGE_PIN K14  [get_ports p4]
+set_property IOSTANDARD LVCMOS33 [get_ports p4]
+
+
+#------------------------------------------------------------------------
+
 #This constraint ensures the MMCM located in the clock region connected to the ZYBO's HDMI port
 #is used for the axi_dispctrl core driving the HDMI port
 set_property LOC MMCME2_ADV_X0Y0 [get_cells system_i/axi_dispctrl_0/inst/DONT_USE_BUFR_DIV5.Inst_mmcme2_drp/mmcm_adv_inst]
@@ -94,3 +115,8 @@ create_generated_clock -name vga_pxlclk -source [get_pins {system_i/processing_s
 set_false_path -from [get_clocks vga_pxlclk] -to [get_clocks clk_fpga_0]
 set_false_path -from [get_clocks clk_fpga_0] -to [get_clocks vga_pxlclk]
 
+
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk]

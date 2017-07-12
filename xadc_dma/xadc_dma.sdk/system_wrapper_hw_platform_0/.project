@@ -11,7 +11,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1498626839861</id>
+			<id>1499751293855</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -20,7 +20,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1498626839863</id>
+			<id>1499751293860</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -29,34 +29,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1498626839865</id>
-			<name></name>
-			<type>6</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-*.hwh</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1499341105639</id>
-			<name></name>
-			<type>6</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-*.xml</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1499341105655</id>
-			<name></name>
-			<type>6</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-*.svd</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1499341105661</id>
+			<id>1499751293862</id>
 			<name></name>
 			<type>6</type>
 			<matcher>

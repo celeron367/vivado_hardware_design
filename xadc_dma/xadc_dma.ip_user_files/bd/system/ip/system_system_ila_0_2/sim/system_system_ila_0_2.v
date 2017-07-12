@@ -98,13 +98,13 @@ module system_system_ila_0_2 (
   SLOT_1_AXI_rlast,
   SLOT_1_AXI_rvalid,
   SLOT_1_AXI_rready,
+  SLOT_2_AXIS_tid,
   SLOT_2_AXIS_tdata,
-  SLOT_2_AXIS_tkeep,
   SLOT_2_AXIS_tlast,
   SLOT_2_AXIS_tvalid,
   SLOT_2_AXIS_tready,
+  SLOT_3_AXIS_tid,
   SLOT_3_AXIS_tdata,
-  SLOT_3_AXIS_tkeep,
   SLOT_3_AXIS_tlast,
   SLOT_3_AXIS_tvalid,
   SLOT_3_AXIS_tready,
@@ -127,6 +127,25 @@ module system_system_ila_0_2 (
   SLOT_4_AXI_rresp,
   SLOT_4_AXI_rvalid,
   SLOT_4_AXI_rready,
+  SLOT_5_AXI_awaddr,
+  SLOT_5_AXI_awprot,
+  SLOT_5_AXI_awvalid,
+  SLOT_5_AXI_awready,
+  SLOT_5_AXI_wdata,
+  SLOT_5_AXI_wstrb,
+  SLOT_5_AXI_wvalid,
+  SLOT_5_AXI_wready,
+  SLOT_5_AXI_bresp,
+  SLOT_5_AXI_bvalid,
+  SLOT_5_AXI_bready,
+  SLOT_5_AXI_araddr,
+  SLOT_5_AXI_arprot,
+  SLOT_5_AXI_arvalid,
+  SLOT_5_AXI_arready,
+  SLOT_5_AXI_rdata,
+  SLOT_5_AXI_rresp,
+  SLOT_5_AXI_rvalid,
+  SLOT_5_AXI_rready,
   resetn
 );
 
@@ -218,20 +237,20 @@ input wire SLOT_1_AXI_rlast;
 input wire SLOT_1_AXI_rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_1_AXI RREADY" *)
 input wire SLOT_1_AXI_rready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TID" *)
+input wire [4 : 0] SLOT_2_AXIS_tid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TDATA" *)
-input wire [31 : 0] SLOT_2_AXIS_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TKEEP" *)
-input wire [3 : 0] SLOT_2_AXIS_tkeep;
+input wire [15 : 0] SLOT_2_AXIS_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TLAST" *)
 input wire SLOT_2_AXIS_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TVALID" *)
 input wire SLOT_2_AXIS_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TREADY" *)
 input wire SLOT_2_AXIS_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_3_AXIS TID" *)
+input wire [4 : 0] SLOT_3_AXIS_tid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_3_AXIS TDATA" *)
-input wire [31 : 0] SLOT_3_AXIS_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_3_AXIS TKEEP" *)
-input wire [3 : 0] SLOT_3_AXIS_tkeep;
+input wire [15 : 0] SLOT_3_AXIS_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_3_AXIS TLAST" *)
 input wire SLOT_3_AXIS_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_3_AXIS TVALID" *)
@@ -276,6 +295,44 @@ input wire [1 : 0] SLOT_4_AXI_rresp;
 input wire SLOT_4_AXI_rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_4_AXI RREADY" *)
 input wire SLOT_4_AXI_rready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI AWADDR" *)
+input wire [10 : 0] SLOT_5_AXI_awaddr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI AWPROT" *)
+input wire [2 : 0] SLOT_5_AXI_awprot;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI AWVALID" *)
+input wire SLOT_5_AXI_awvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI AWREADY" *)
+input wire SLOT_5_AXI_awready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI WDATA" *)
+input wire [31 : 0] SLOT_5_AXI_wdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI WSTRB" *)
+input wire [3 : 0] SLOT_5_AXI_wstrb;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI WVALID" *)
+input wire SLOT_5_AXI_wvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI WREADY" *)
+input wire SLOT_5_AXI_wready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI BRESP" *)
+input wire [1 : 0] SLOT_5_AXI_bresp;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI BVALID" *)
+input wire SLOT_5_AXI_bvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI BREADY" *)
+input wire SLOT_5_AXI_bready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI ARADDR" *)
+input wire [10 : 0] SLOT_5_AXI_araddr;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI ARPROT" *)
+input wire [2 : 0] SLOT_5_AXI_arprot;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI ARVALID" *)
+input wire SLOT_5_AXI_arvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI ARREADY" *)
+input wire SLOT_5_AXI_arready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI RDATA" *)
+input wire [31 : 0] SLOT_5_AXI_rdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI RRESP" *)
+input wire [1 : 0] SLOT_5_AXI_rresp;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI RVALID" *)
+input wire SLOT_5_AXI_rvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 SLOT_5_AXI RREADY" *)
+input wire SLOT_5_AXI_rready;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.resetn RST" *)
 input wire resetn;
 
@@ -324,13 +381,13 @@ input wire resetn;
     .SLOT_1_AXI_rlast(SLOT_1_AXI_rlast),
     .SLOT_1_AXI_rvalid(SLOT_1_AXI_rvalid),
     .SLOT_1_AXI_rready(SLOT_1_AXI_rready),
+    .SLOT_2_AXIS_tid(SLOT_2_AXIS_tid),
     .SLOT_2_AXIS_tdata(SLOT_2_AXIS_tdata),
-    .SLOT_2_AXIS_tkeep(SLOT_2_AXIS_tkeep),
     .SLOT_2_AXIS_tlast(SLOT_2_AXIS_tlast),
     .SLOT_2_AXIS_tvalid(SLOT_2_AXIS_tvalid),
     .SLOT_2_AXIS_tready(SLOT_2_AXIS_tready),
+    .SLOT_3_AXIS_tid(SLOT_3_AXIS_tid),
     .SLOT_3_AXIS_tdata(SLOT_3_AXIS_tdata),
-    .SLOT_3_AXIS_tkeep(SLOT_3_AXIS_tkeep),
     .SLOT_3_AXIS_tlast(SLOT_3_AXIS_tlast),
     .SLOT_3_AXIS_tvalid(SLOT_3_AXIS_tvalid),
     .SLOT_3_AXIS_tready(SLOT_3_AXIS_tready),
@@ -353,6 +410,25 @@ input wire resetn;
     .SLOT_4_AXI_rresp(SLOT_4_AXI_rresp),
     .SLOT_4_AXI_rvalid(SLOT_4_AXI_rvalid),
     .SLOT_4_AXI_rready(SLOT_4_AXI_rready),
+    .SLOT_5_AXI_awaddr(SLOT_5_AXI_awaddr),
+    .SLOT_5_AXI_awprot(SLOT_5_AXI_awprot),
+    .SLOT_5_AXI_awvalid(SLOT_5_AXI_awvalid),
+    .SLOT_5_AXI_awready(SLOT_5_AXI_awready),
+    .SLOT_5_AXI_wdata(SLOT_5_AXI_wdata),
+    .SLOT_5_AXI_wstrb(SLOT_5_AXI_wstrb),
+    .SLOT_5_AXI_wvalid(SLOT_5_AXI_wvalid),
+    .SLOT_5_AXI_wready(SLOT_5_AXI_wready),
+    .SLOT_5_AXI_bresp(SLOT_5_AXI_bresp),
+    .SLOT_5_AXI_bvalid(SLOT_5_AXI_bvalid),
+    .SLOT_5_AXI_bready(SLOT_5_AXI_bready),
+    .SLOT_5_AXI_araddr(SLOT_5_AXI_araddr),
+    .SLOT_5_AXI_arprot(SLOT_5_AXI_arprot),
+    .SLOT_5_AXI_arvalid(SLOT_5_AXI_arvalid),
+    .SLOT_5_AXI_arready(SLOT_5_AXI_arready),
+    .SLOT_5_AXI_rdata(SLOT_5_AXI_rdata),
+    .SLOT_5_AXI_rresp(SLOT_5_AXI_rresp),
+    .SLOT_5_AXI_rvalid(SLOT_5_AXI_rvalid),
+    .SLOT_5_AXI_rready(SLOT_5_AXI_rready),
     .resetn(resetn)
   );
 endmodule

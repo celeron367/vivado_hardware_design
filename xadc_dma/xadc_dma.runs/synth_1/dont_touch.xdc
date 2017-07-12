@@ -6,14 +6,8 @@
 # Block Designs: bd/system/system.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system || ORIG_REF_NAME==system}]
 
-# IP: bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_BTNs_4Bits_0 || ORIG_REF_NAME==system_BTNs_4Bits_0}]
-
 # IP: bd/system/ip/system_LEDs_4Bits_1/system_LEDs_4Bits_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_LEDs_4Bits_1 || ORIG_REF_NAME==system_LEDs_4Bits_1}]
-
-# IP: bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_SWs_4Bits_2 || ORIG_REF_NAME==system_SWs_4Bits_2}]
 
 # IP: bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_processing_system7_0_0 || ORIG_REF_NAME==system_processing_system7_0_0}]
@@ -90,17 +84,29 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_1439_slot_4_
 # IP: bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_16/bd_1439_slot_4_r_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_1439_slot_4_r_0 || ORIG_REF_NAME==bd_1439_slot_4_r_0}]
 
+# IP: bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_17/bd_1439_slot_5_aw_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_1439_slot_5_aw_0 || ORIG_REF_NAME==bd_1439_slot_5_aw_0}]
+
+# IP: bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_18/bd_1439_slot_5_w_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_1439_slot_5_w_0 || ORIG_REF_NAME==bd_1439_slot_5_w_0}]
+
+# IP: bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_19/bd_1439_slot_5_b_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_1439_slot_5_b_0 || ORIG_REF_NAME==bd_1439_slot_5_b_0}]
+
+# IP: bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_20/bd_1439_slot_5_ar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_1439_slot_5_ar_0 || ORIG_REF_NAME==bd_1439_slot_5_ar_0}]
+
+# IP: bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_21/bd_1439_slot_5_r_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_1439_slot_5_r_0 || ORIG_REF_NAME==bd_1439_slot_5_r_0}]
+
 # IP: bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_rst_ps7_0_100M_0 || ORIG_REF_NAME==system_rst_ps7_0_100M_0}]
 
 # IP: bd/system/ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axis_data_fifo_0_0 || ORIG_REF_NAME==system_axis_data_fifo_0_0}]
 
-# IP: bd/system/ip/system_m04_regslice_0/system_m04_regslice_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_m04_regslice_0 || ORIG_REF_NAME==system_m04_regslice_0}]
-
-# IP: bd/system/ip/system_m03_regslice_0/system_m03_regslice_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_m03_regslice_0 || ORIG_REF_NAME==system_m03_regslice_0}]
+# IP: bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xadc_wiz_0_0 || ORIG_REF_NAME==system_xadc_wiz_0_0}]
 
 # IP: bd/system/ip/system_m02_regslice_0/system_m02_regslice_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_m02_regslice_0 || ORIG_REF_NAME==system_m02_regslice_0}]
@@ -123,14 +129,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_us_
 # IP: bd/system/ip/system_auto_us_0/system_auto_us_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_us_0 || ORIG_REF_NAME==system_auto_us_0}]
 
-# XDC: bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_BTNs_4Bits_0 || ORIG_REF_NAME==system_BTNs_4Bits_0}] {/U0 }]/U0 ]]
-
-# XDC: bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0_ooc.xdc
-
-# XDC: bd/system/ip/system_BTNs_4Bits_0/system_BTNs_4Bits_0.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_BTNs_4Bits_0 || ORIG_REF_NAME==system_BTNs_4Bits_0}] {/U0 }]/U0 ]]
-
 # XDC: bd/system/ip/system_LEDs_4Bits_1/system_LEDs_4Bits_1_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_LEDs_4Bits_1 || ORIG_REF_NAME==system_LEDs_4Bits_1}] {/U0 }]/U0 ]]
 
@@ -138,14 +136,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/system/ip/system_LEDs_4Bits_1/system_LEDs_4Bits_1.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_LEDs_4Bits_1 || ORIG_REF_NAME==system_LEDs_4Bits_1}] {/U0 }]/U0 ]]
-
-# XDC: bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2_board.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_SWs_4Bits_2 || ORIG_REF_NAME==system_SWs_4Bits_2}] {/U0 }]/U0 ]]
-
-# XDC: bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2_ooc.xdc
-
-# XDC: bd/system/ip/system_SWs_4Bits_2/system_SWs_4Bits_2.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_SWs_4Bits_2 || ORIG_REF_NAME==system_SWs_4Bits_2}] {/U0 }]/U0 ]]
 
 # XDC: bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_processing_system7_0_0 || ORIG_REF_NAME==system_processing_system7_0_0}] {/inst }]/inst ]]
@@ -182,9 +172,10 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/system/ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axis_data_fifo_0_0 || ORIG_REF_NAME==system_axis_data_fifo_0_0}] {/inst }]/inst ]]
 
-# XDC: bd/system/ip/system_m04_regslice_0/system_m04_regslice_0_ooc.xdc
+# XDC: bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0_ooc.xdc
 
-# XDC: bd/system/ip/system_m03_regslice_0/system_m03_regslice_0_ooc.xdc
+# XDC: bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_xadc_wiz_0_0 || ORIG_REF_NAME==system_xadc_wiz_0_0}] {/inst }]/inst ]]
 
 # XDC: bd/system/ip/system_m02_regslice_0/system_m02_regslice_0_ooc.xdc
 

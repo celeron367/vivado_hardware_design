@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jul 10 11:26:58 2017
+# Process ID: 9012
+# Current directory: E:/vivado_hardware_design/xadc_dma
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8380 E:\vivado_hardware_design\xadc_dma\xadc_dma.xpr
+# Log file: E:/vivado_hardware_design/xadc_dma/vivado.log
+# Journal file: E:/vivado_hardware_design/xadc_dma\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/vivado_hardware_design/xadc_dma/xadc_dma.xpr
+update_compile_order -fileset sources_1
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI] [get_bd_intf_nets SWs_4Bits_GPIO] [get_bd_cells SWs_4Bits]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M01_AXI] [get_bd_intf_nets BTNs_4Bits_GPIO] [get_bd_cells BTNs_4Bits]
+delete_bd_objs [get_bd_intf_ports SWs_4Bits]
+delete_bd_objs [get_bd_intf_ports BTNs_4Bits]
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.NUM_MI {3}] [get_bd_cells processing_system7_0_axi_periph]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/processing_system7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/processing_system7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins xadc_wiz_0/s_axi_lite]
+endgroup
+assign_bd_address
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list n1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list n3]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list n4]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list n1]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+open_hw

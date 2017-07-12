@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jul 10 10:25:25 2017
+# Process ID: 2392
+# Current directory: E:/vivado_hardware_design/xadc_dma
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5920 E:\vivado_hardware_design\xadc_dma\xadc_dma.xpr
+# Log file: E:/vivado_hardware_design/xadc_dma/vivado.log
+# Journal file: E:/vivado_hardware_design/xadc_dma\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/vivado_hardware_design/xadc_dma/xadc_dma.xpr
+update_compile_order -fileset sources_1
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {xadc_wiz_0_M_AXIS }]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {processing_system7_0_axi_periph_M04_AXI }]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets xadc_wiz_0_M_AXIS] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                          [get_bd_intf_nets processing_system7_0_axi_periph_M04_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+startgroup
+set_property -dict [list CONFIG.CHANNEL_ENABLE_VP_VN {true} CONFIG.CHANNEL_ENABLE_VAUXP0_VAUXN0 {false} CONFIG.CHANNEL_ENABLE_VAUXP1_VAUXN1 {false} CONFIG.CHANNEL_ENABLE_VAUXP6_VAUXN6 {true} CONFIG.CHANNEL_ENABLE_VAUXP7_VAUXN7 {true} CONFIG.CHANNEL_ENABLE_VAUXP8_VAUXN8 {false} CONFIG.CHANNEL_ENABLE_VAUXP9_VAUXN9 {false} CONFIG.CHANNEL_ENABLE_VAUXP14_VAUXN14 {true} CONFIG.CHANNEL_ENABLE_VAUXP15_VAUXN15 {true}] [get_bd_cells xadc_wiz_0]
+endgroup
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+startgroup
+create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux6
+connect_bd_intf_net [get_bd_intf_pins xadc_wiz_0/Vaux6] [get_bd_intf_ports Vaux6]
+endgroup
+delete_bd_objs [get_bd_intf_nets Vaux6_1] [get_bd_intf_ports Vaux6]
+startgroup
+create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux7
+connect_bd_intf_net [get_bd_intf_pins xadc_wiz_0/Vaux7] [get_bd_intf_ports Vaux7]
+endgroup
+delete_bd_objs [get_bd_intf_nets Vaux7_1] [get_bd_intf_ports Vaux7]
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxn6]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxp6]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxn7]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxp7]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxn14]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxp14]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxn15]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins xadc_wiz_0/Vaux15]
+endgroup
+delete_bd_objs [get_bd_intf_nets Vaux15_1] [get_bd_intf_ports Vaux15]
+startgroup
+make_bd_pins_external  [get_bd_pins xadc_wiz_0/vauxp15]
+endgroup
+set_property name n1 [get_bd_ports vauxn6]
+set_property name p1 [get_bd_ports vauxp6]
+set_property name n2 [get_bd_ports vauxn7]
+set_property name p2 [get_bd_ports vauxp7]
+set_property name n3 [get_bd_ports vauxn14]
+set_property name p3 [get_bd_ports vauxp14]
+set_property name n4 [get_bd_ports vauxn15]
+set_property name p4 [get_bd_ports vauxp15]
+save_bd_design
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+validate_bd_design -force
+save_bd_design
+reset_run synth_1

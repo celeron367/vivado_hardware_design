@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Fri Jul  7 15:08:38 2017
+//Date        : Tue Jul 11 09:56:09 2017
 //Host        : win-PC running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target bd_1439.bd
 //Design      : bd_1439
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "bd_1439,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_1439,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system_system_ila_0_2.hwdef" *) 
+(* CORE_GENERATION_INFO = "bd_1439,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_1439,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=22,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}" *) (* HW_HANDOFF = "system_system_ila_0_2.hwdef" *) 
 module bd_1439
    (SLOT_0_AXI_araddr,
     SLOT_0_AXI_arlen,
@@ -55,12 +55,12 @@ module bd_1439
     SLOT_1_AXI_wstrb,
     SLOT_1_AXI_wvalid,
     SLOT_2_AXIS_tdata,
-    SLOT_2_AXIS_tkeep,
+    SLOT_2_AXIS_tid,
     SLOT_2_AXIS_tlast,
     SLOT_2_AXIS_tready,
     SLOT_2_AXIS_tvalid,
     SLOT_3_AXIS_tdata,
-    SLOT_3_AXIS_tkeep,
+    SLOT_3_AXIS_tid,
     SLOT_3_AXIS_tlast,
     SLOT_3_AXIS_tready,
     SLOT_3_AXIS_tvalid,
@@ -83,6 +83,25 @@ module bd_1439
     SLOT_4_AXI_wready,
     SLOT_4_AXI_wstrb,
     SLOT_4_AXI_wvalid,
+    SLOT_5_AXI_araddr,
+    SLOT_5_AXI_arprot,
+    SLOT_5_AXI_arready,
+    SLOT_5_AXI_arvalid,
+    SLOT_5_AXI_awaddr,
+    SLOT_5_AXI_awprot,
+    SLOT_5_AXI_awready,
+    SLOT_5_AXI_awvalid,
+    SLOT_5_AXI_bready,
+    SLOT_5_AXI_bresp,
+    SLOT_5_AXI_bvalid,
+    SLOT_5_AXI_rdata,
+    SLOT_5_AXI_rready,
+    SLOT_5_AXI_rresp,
+    SLOT_5_AXI_rvalid,
+    SLOT_5_AXI_wdata,
+    SLOT_5_AXI_wready,
+    SLOT_5_AXI_wstrb,
+    SLOT_5_AXI_wvalid,
     clk,
     resetn);
   input [31:0]SLOT_0_AXI_araddr;
@@ -128,13 +147,13 @@ module bd_1439
   input SLOT_1_AXI_wready;
   input [3:0]SLOT_1_AXI_wstrb;
   input SLOT_1_AXI_wvalid;
-  input [31:0]SLOT_2_AXIS_tdata;
-  input [3:0]SLOT_2_AXIS_tkeep;
+  input [15:0]SLOT_2_AXIS_tdata;
+  input [4:0]SLOT_2_AXIS_tid;
   input SLOT_2_AXIS_tlast;
   input SLOT_2_AXIS_tready;
   input SLOT_2_AXIS_tvalid;
-  input [31:0]SLOT_3_AXIS_tdata;
-  input [3:0]SLOT_3_AXIS_tkeep;
+  input [15:0]SLOT_3_AXIS_tdata;
+  input [4:0]SLOT_3_AXIS_tid;
   input SLOT_3_AXIS_tlast;
   input SLOT_3_AXIS_tready;
   input SLOT_3_AXIS_tvalid;
@@ -157,6 +176,25 @@ module bd_1439
   input SLOT_4_AXI_wready;
   input [3:0]SLOT_4_AXI_wstrb;
   input SLOT_4_AXI_wvalid;
+  input [10:0]SLOT_5_AXI_araddr;
+  input [2:0]SLOT_5_AXI_arprot;
+  input SLOT_5_AXI_arready;
+  input SLOT_5_AXI_arvalid;
+  input [10:0]SLOT_5_AXI_awaddr;
+  input [2:0]SLOT_5_AXI_awprot;
+  input SLOT_5_AXI_awready;
+  input SLOT_5_AXI_awvalid;
+  input SLOT_5_AXI_bready;
+  input [1:0]SLOT_5_AXI_bresp;
+  input SLOT_5_AXI_bvalid;
+  input [31:0]SLOT_5_AXI_rdata;
+  input SLOT_5_AXI_rready;
+  input [1:0]SLOT_5_AXI_rresp;
+  input SLOT_5_AXI_rvalid;
+  input [31:0]SLOT_5_AXI_wdata;
+  input SLOT_5_AXI_wready;
+  input [3:0]SLOT_5_AXI_wstrb;
+  input SLOT_5_AXI_wvalid;
   input clk;
   input resetn;
 
@@ -182,13 +220,13 @@ module bd_1439
   wire Conn1_WREADY;
   wire [3:0]Conn1_WSTRB;
   wire Conn1_WVALID;
-  wire [31:0]Conn2_TDATA;
-  wire [3:0]Conn2_TKEEP;
+  wire [15:0]Conn2_TDATA;
+  wire [4:0]Conn2_TID;
   wire Conn2_TLAST;
   wire Conn2_TREADY;
   wire Conn2_TVALID;
-  wire [31:0]Conn3_TDATA;
-  wire [3:0]Conn3_TKEEP;
+  wire [15:0]Conn3_TDATA;
+  wire [4:0]Conn3_TID;
   wire Conn3_TLAST;
   wire Conn3_TREADY;
   wire Conn3_TVALID;
@@ -211,6 +249,25 @@ module bd_1439
   wire Conn4_WREADY;
   wire [3:0]Conn4_WSTRB;
   wire Conn4_WVALID;
+  wire [10:0]Conn5_ARADDR;
+  wire [2:0]Conn5_ARPROT;
+  wire Conn5_ARREADY;
+  wire Conn5_ARVALID;
+  wire [10:0]Conn5_AWADDR;
+  wire [2:0]Conn5_AWPROT;
+  wire Conn5_AWREADY;
+  wire Conn5_AWVALID;
+  wire Conn5_BREADY;
+  wire [1:0]Conn5_BRESP;
+  wire Conn5_BVALID;
+  wire [31:0]Conn5_RDATA;
+  wire Conn5_RREADY;
+  wire [1:0]Conn5_RRESP;
+  wire Conn5_RVALID;
+  wire [31:0]Conn5_WDATA;
+  wire Conn5_WREADY;
+  wire [3:0]Conn5_WSTRB;
+  wire Conn5_WVALID;
   wire [31:0]Conn_ARADDR;
   wire [7:0]Conn_ARLEN;
   wire Conn_ARREADY;
@@ -294,13 +351,13 @@ module bd_1439
   wire net_slot_1_axi_wready;
   wire [3:0]net_slot_1_axi_wstrb;
   wire net_slot_1_axi_wvalid;
-  wire [31:0]net_slot_2_axis_tdata;
-  wire [3:0]net_slot_2_axis_tkeep;
+  wire [15:0]net_slot_2_axis_tdata;
+  wire [4:0]net_slot_2_axis_tid;
   wire net_slot_2_axis_tlast;
   wire net_slot_2_axis_tready;
   wire net_slot_2_axis_tvalid;
-  wire [31:0]net_slot_3_axis_tdata;
-  wire [3:0]net_slot_3_axis_tkeep;
+  wire [15:0]net_slot_3_axis_tdata;
+  wire [4:0]net_slot_3_axis_tid;
   wire net_slot_3_axis_tlast;
   wire net_slot_3_axis_tready;
   wire net_slot_3_axis_tvalid;
@@ -332,6 +389,34 @@ module bd_1439
   wire net_slot_4_axi_wready;
   wire [3:0]net_slot_4_axi_wstrb;
   wire net_slot_4_axi_wvalid;
+  wire [1:0]net_slot_5_axi_ar_cnt;
+  wire [1:0]net_slot_5_axi_ar_ctrl;
+  wire [10:0]net_slot_5_axi_araddr;
+  wire [2:0]net_slot_5_axi_arprot;
+  wire net_slot_5_axi_arready;
+  wire net_slot_5_axi_arvalid;
+  wire [1:0]net_slot_5_axi_aw_cnt;
+  wire [1:0]net_slot_5_axi_aw_ctrl;
+  wire [10:0]net_slot_5_axi_awaddr;
+  wire [2:0]net_slot_5_axi_awprot;
+  wire net_slot_5_axi_awready;
+  wire net_slot_5_axi_awvalid;
+  wire [1:0]net_slot_5_axi_b_cnt;
+  wire [1:0]net_slot_5_axi_b_ctrl;
+  wire net_slot_5_axi_bready;
+  wire [1:0]net_slot_5_axi_bresp;
+  wire net_slot_5_axi_bvalid;
+  wire [1:0]net_slot_5_axi_r_cnt;
+  wire [1:0]net_slot_5_axi_r_ctrl;
+  wire [31:0]net_slot_5_axi_rdata;
+  wire net_slot_5_axi_rready;
+  wire [1:0]net_slot_5_axi_rresp;
+  wire net_slot_5_axi_rvalid;
+  wire [1:0]net_slot_5_axi_w_ctrl;
+  wire [31:0]net_slot_5_axi_wdata;
+  wire net_slot_5_axi_wready;
+  wire [3:0]net_slot_5_axi_wstrb;
+  wire net_slot_5_axi_wvalid;
   wire resetn_1;
 
   assign Conn1_ARADDR = SLOT_1_AXI_araddr[31:0];
@@ -356,13 +441,13 @@ module bd_1439
   assign Conn1_WREADY = SLOT_1_AXI_wready;
   assign Conn1_WSTRB = SLOT_1_AXI_wstrb[3:0];
   assign Conn1_WVALID = SLOT_1_AXI_wvalid;
-  assign Conn2_TDATA = SLOT_2_AXIS_tdata[31:0];
-  assign Conn2_TKEEP = SLOT_2_AXIS_tkeep[3:0];
+  assign Conn2_TDATA = SLOT_2_AXIS_tdata[15:0];
+  assign Conn2_TID = SLOT_2_AXIS_tid[4:0];
   assign Conn2_TLAST = SLOT_2_AXIS_tlast;
   assign Conn2_TREADY = SLOT_2_AXIS_tready;
   assign Conn2_TVALID = SLOT_2_AXIS_tvalid;
-  assign Conn3_TDATA = SLOT_3_AXIS_tdata[31:0];
-  assign Conn3_TKEEP = SLOT_3_AXIS_tkeep[3:0];
+  assign Conn3_TDATA = SLOT_3_AXIS_tdata[15:0];
+  assign Conn3_TID = SLOT_3_AXIS_tid[4:0];
   assign Conn3_TLAST = SLOT_3_AXIS_tlast;
   assign Conn3_TREADY = SLOT_3_AXIS_tready;
   assign Conn3_TVALID = SLOT_3_AXIS_tvalid;
@@ -385,6 +470,25 @@ module bd_1439
   assign Conn4_WREADY = SLOT_4_AXI_wready;
   assign Conn4_WSTRB = SLOT_4_AXI_wstrb[3:0];
   assign Conn4_WVALID = SLOT_4_AXI_wvalid;
+  assign Conn5_ARADDR = SLOT_5_AXI_araddr[10:0];
+  assign Conn5_ARPROT = SLOT_5_AXI_arprot[2:0];
+  assign Conn5_ARREADY = SLOT_5_AXI_arready;
+  assign Conn5_ARVALID = SLOT_5_AXI_arvalid;
+  assign Conn5_AWADDR = SLOT_5_AXI_awaddr[10:0];
+  assign Conn5_AWPROT = SLOT_5_AXI_awprot[2:0];
+  assign Conn5_AWREADY = SLOT_5_AXI_awready;
+  assign Conn5_AWVALID = SLOT_5_AXI_awvalid;
+  assign Conn5_BREADY = SLOT_5_AXI_bready;
+  assign Conn5_BRESP = SLOT_5_AXI_bresp[1:0];
+  assign Conn5_BVALID = SLOT_5_AXI_bvalid;
+  assign Conn5_RDATA = SLOT_5_AXI_rdata[31:0];
+  assign Conn5_RREADY = SLOT_5_AXI_rready;
+  assign Conn5_RRESP = SLOT_5_AXI_rresp[1:0];
+  assign Conn5_RVALID = SLOT_5_AXI_rvalid;
+  assign Conn5_WDATA = SLOT_5_AXI_wdata[31:0];
+  assign Conn5_WREADY = SLOT_5_AXI_wready;
+  assign Conn5_WSTRB = SLOT_5_AXI_wstrb[3:0];
+  assign Conn5_WVALID = SLOT_5_AXI_wvalid;
   assign Conn_ARADDR = SLOT_0_AXI_araddr[31:0];
   assign Conn_ARLEN = SLOT_0_AXI_arlen[7:0];
   assign Conn_ARREADY = SLOT_0_AXI_arready;
@@ -463,12 +567,12 @@ module bd_1439
         .m_slot_1_axi_wstrb(net_slot_1_axi_wstrb),
         .m_slot_1_axi_wvalid(net_slot_1_axi_wvalid),
         .m_slot_2_axis_tdata(net_slot_2_axis_tdata),
-        .m_slot_2_axis_tkeep(net_slot_2_axis_tkeep),
+        .m_slot_2_axis_tid(net_slot_2_axis_tid),
         .m_slot_2_axis_tlast(net_slot_2_axis_tlast),
         .m_slot_2_axis_tready(net_slot_2_axis_tready),
         .m_slot_2_axis_tvalid(net_slot_2_axis_tvalid),
         .m_slot_3_axis_tdata(net_slot_3_axis_tdata),
-        .m_slot_3_axis_tkeep(net_slot_3_axis_tkeep),
+        .m_slot_3_axis_tid(net_slot_3_axis_tid),
         .m_slot_3_axis_tlast(net_slot_3_axis_tlast),
         .m_slot_3_axis_tready(net_slot_3_axis_tready),
         .m_slot_3_axis_tvalid(net_slot_3_axis_tvalid),
@@ -495,6 +599,29 @@ module bd_1439
         .m_slot_4_axi_wready(net_slot_4_axi_wready),
         .m_slot_4_axi_wstrb(net_slot_4_axi_wstrb),
         .m_slot_4_axi_wvalid(net_slot_4_axi_wvalid),
+        .m_slot_5_axi_ar_cnt(net_slot_5_axi_ar_cnt),
+        .m_slot_5_axi_araddr(net_slot_5_axi_araddr),
+        .m_slot_5_axi_arprot(net_slot_5_axi_arprot),
+        .m_slot_5_axi_arready(net_slot_5_axi_arready),
+        .m_slot_5_axi_arvalid(net_slot_5_axi_arvalid),
+        .m_slot_5_axi_aw_cnt(net_slot_5_axi_aw_cnt),
+        .m_slot_5_axi_awaddr(net_slot_5_axi_awaddr),
+        .m_slot_5_axi_awprot(net_slot_5_axi_awprot),
+        .m_slot_5_axi_awready(net_slot_5_axi_awready),
+        .m_slot_5_axi_awvalid(net_slot_5_axi_awvalid),
+        .m_slot_5_axi_b_cnt(net_slot_5_axi_b_cnt),
+        .m_slot_5_axi_bready(net_slot_5_axi_bready),
+        .m_slot_5_axi_bresp(net_slot_5_axi_bresp),
+        .m_slot_5_axi_bvalid(net_slot_5_axi_bvalid),
+        .m_slot_5_axi_r_cnt(net_slot_5_axi_r_cnt),
+        .m_slot_5_axi_rdata(net_slot_5_axi_rdata),
+        .m_slot_5_axi_rready(net_slot_5_axi_rready),
+        .m_slot_5_axi_rresp(net_slot_5_axi_rresp),
+        .m_slot_5_axi_rvalid(net_slot_5_axi_rvalid),
+        .m_slot_5_axi_wdata(net_slot_5_axi_wdata),
+        .m_slot_5_axi_wready(net_slot_5_axi_wready),
+        .m_slot_5_axi_wstrb(net_slot_5_axi_wstrb),
+        .m_slot_5_axi_wvalid(net_slot_5_axi_wvalid),
         .slot_0_axi_araddr(Conn_ARADDR),
         .slot_0_axi_arlen(Conn_ARLEN),
         .slot_0_axi_arready(Conn_ARREADY),
@@ -539,12 +666,12 @@ module bd_1439
         .slot_1_axi_wstrb(Conn1_WSTRB),
         .slot_1_axi_wvalid(Conn1_WVALID),
         .slot_2_axis_tdata(Conn2_TDATA),
-        .slot_2_axis_tkeep(Conn2_TKEEP),
+        .slot_2_axis_tid(Conn2_TID),
         .slot_2_axis_tlast(Conn2_TLAST),
         .slot_2_axis_tready(Conn2_TREADY),
         .slot_2_axis_tvalid(Conn2_TVALID),
         .slot_3_axis_tdata(Conn3_TDATA),
-        .slot_3_axis_tkeep(Conn3_TKEEP),
+        .slot_3_axis_tid(Conn3_TID),
         .slot_3_axis_tlast(Conn3_TLAST),
         .slot_3_axis_tready(Conn3_TREADY),
         .slot_3_axis_tvalid(Conn3_TVALID),
@@ -566,7 +693,26 @@ module bd_1439
         .slot_4_axi_wdata(Conn4_WDATA),
         .slot_4_axi_wready(Conn4_WREADY),
         .slot_4_axi_wstrb(Conn4_WSTRB),
-        .slot_4_axi_wvalid(Conn4_WVALID));
+        .slot_4_axi_wvalid(Conn4_WVALID),
+        .slot_5_axi_araddr(Conn5_ARADDR),
+        .slot_5_axi_arprot(Conn5_ARPROT),
+        .slot_5_axi_arready(Conn5_ARREADY),
+        .slot_5_axi_arvalid(Conn5_ARVALID),
+        .slot_5_axi_awaddr(Conn5_AWADDR),
+        .slot_5_axi_awprot(Conn5_AWPROT),
+        .slot_5_axi_awready(Conn5_AWREADY),
+        .slot_5_axi_awvalid(Conn5_AWVALID),
+        .slot_5_axi_bready(Conn5_BREADY),
+        .slot_5_axi_bresp(Conn5_BRESP),
+        .slot_5_axi_bvalid(Conn5_BVALID),
+        .slot_5_axi_rdata(Conn5_RDATA),
+        .slot_5_axi_rready(Conn5_RREADY),
+        .slot_5_axi_rresp(Conn5_RRESP),
+        .slot_5_axi_rvalid(Conn5_RVALID),
+        .slot_5_axi_wdata(Conn5_WDATA),
+        .slot_5_axi_wready(Conn5_WREADY),
+        .slot_5_axi_wstrb(Conn5_WSTRB),
+        .slot_5_axi_wvalid(Conn5_WVALID));
   bd_1439_ila_lib_0 ila_lib
        (.clk(clk_1),
         .probe0(net_slot_0_axi_ar_cnt),
@@ -601,13 +747,13 @@ module bd_1439
         .probe35(net_slot_1_axi_ar_ctrl),
         .probe36(net_slot_1_axi_r_ctrl),
         .probe37(net_slot_2_axis_tdata),
-        .probe38(net_slot_2_axis_tkeep),
+        .probe38(net_slot_2_axis_tid),
         .probe39(net_slot_2_axis_tvalid),
         .probe4(net_slot_0_axi_aw_cnt),
         .probe40(net_slot_2_axis_tready),
         .probe41(net_slot_2_axis_tlast),
         .probe42(net_slot_3_axis_tdata),
-        .probe43(net_slot_3_axis_tkeep),
+        .probe43(net_slot_3_axis_tid),
         .probe44(net_slot_3_axis_tvalid),
         .probe45(net_slot_3_axis_tready),
         .probe46(net_slot_3_axis_tlast),
@@ -631,8 +777,26 @@ module bd_1439
         .probe62(net_slot_4_axi_b_ctrl),
         .probe63(net_slot_4_axi_ar_ctrl),
         .probe64(net_slot_4_axi_r_ctrl),
+        .probe65(net_slot_5_axi_ar_cnt),
+        .probe66(net_slot_5_axi_araddr),
+        .probe67(net_slot_5_axi_arprot),
+        .probe68(net_slot_5_axi_aw_cnt),
+        .probe69(net_slot_5_axi_awaddr),
         .probe7(net_slot_0_axi_awsize),
+        .probe70(net_slot_5_axi_awprot),
+        .probe71(net_slot_5_axi_b_cnt),
+        .probe72(net_slot_5_axi_bresp),
+        .probe73(net_slot_5_axi_r_cnt),
+        .probe74(net_slot_5_axi_rdata),
+        .probe75(net_slot_5_axi_rresp),
+        .probe76(net_slot_5_axi_wdata),
+        .probe77(net_slot_5_axi_wstrb),
+        .probe78(net_slot_5_axi_aw_ctrl),
+        .probe79(net_slot_5_axi_w_ctrl),
         .probe8(net_slot_0_axi_b_cnt),
+        .probe80(net_slot_5_axi_b_ctrl),
+        .probe81(net_slot_5_axi_ar_ctrl),
+        .probe82(net_slot_5_axi_r_ctrl),
         .probe9(net_slot_0_axi_r_cnt));
   bd_1439_slot_0_ar_0 slot_0_ar
        (.In0(net_slot_0_axi_arvalid),
@@ -698,4 +862,24 @@ module bd_1439
        (.In0(net_slot_4_axi_wvalid),
         .In1(net_slot_4_axi_wready),
         .dout(net_slot_4_axi_w_ctrl));
+  bd_1439_slot_5_ar_0 slot_5_ar
+       (.In0(net_slot_5_axi_arvalid),
+        .In1(net_slot_5_axi_arready),
+        .dout(net_slot_5_axi_ar_ctrl));
+  bd_1439_slot_5_aw_0 slot_5_aw
+       (.In0(net_slot_5_axi_awvalid),
+        .In1(net_slot_5_axi_awready),
+        .dout(net_slot_5_axi_aw_ctrl));
+  bd_1439_slot_5_b_0 slot_5_b
+       (.In0(net_slot_5_axi_bvalid),
+        .In1(net_slot_5_axi_bready),
+        .dout(net_slot_5_axi_b_ctrl));
+  bd_1439_slot_5_r_0 slot_5_r
+       (.In0(net_slot_5_axi_rvalid),
+        .In1(net_slot_5_axi_rready),
+        .dout(net_slot_5_axi_r_ctrl));
+  bd_1439_slot_5_w_0 slot_5_w
+       (.In0(net_slot_5_axi_wvalid),
+        .In1(net_slot_5_axi_wready),
+        .dout(net_slot_5_axi_w_ctrl));
 endmodule

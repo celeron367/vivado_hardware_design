@@ -114,8 +114,8 @@ ENTITY system_axi_dma_0_0 IS
     m_axi_s2mm_bvalid : IN STD_LOGIC;
     m_axi_s2mm_bready : OUT STD_LOGIC;
     s2mm_prmry_reset_out_n : OUT STD_LOGIC;
-    s_axis_s2mm_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    s_axis_s2mm_tkeep : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    s_axis_s2mm_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    s_axis_s2mm_tkeep : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axis_s2mm_tvalid : IN STD_LOGIC;
     s_axis_s2mm_tready : OUT STD_LOGIC;
     s_axis_s2mm_tlast : IN STD_LOGIC;
@@ -262,8 +262,8 @@ ARCHITECTURE system_axi_dma_0_0_arch OF system_axi_dma_0_0 IS
       m_axi_s2mm_bvalid : IN STD_LOGIC;
       m_axi_s2mm_bready : OUT STD_LOGIC;
       s2mm_prmry_reset_out_n : OUT STD_LOGIC;
-      s_axis_s2mm_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      s_axis_s2mm_tkeep : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      s_axis_s2mm_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      s_axis_s2mm_tkeep : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axis_s2mm_tvalid : IN STD_LOGIC;
       s_axis_s2mm_tready : OUT STD_LOGIC;
       s_axis_s2mm_tlast : IN STD_LOGIC;
@@ -376,7 +376,7 @@ BEGIN
       C_S2MM_BURST_SIZE => 16,
       C_M_AXI_S2MM_ADDR_WIDTH => 32,
       C_M_AXI_S2MM_DATA_WIDTH => 32,
-      C_S_AXIS_S2MM_TDATA_WIDTH => 32,
+      C_S_AXIS_S2MM_TDATA_WIDTH => 16,
       C_INCLUDE_S2MM_DRE => 0,
       C_FAMILY => "zynq"
     )

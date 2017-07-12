@@ -1,0 +1,476 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Jul 10 11:26:58 2017
+# Process ID: 9012
+# Current directory: E:/vivado_hardware_design/xadc_dma
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8380 E:\vivado_hardware_design\xadc_dma\xadc_dma.xpr
+# Log file: E:/vivado_hardware_design/xadc_dma/vivado.log
+# Journal file: E:/vivado_hardware_design/xadc_dma\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/vivado_hardware_design/xadc_dma/xadc_dma.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/zybo_base_system/source/vivado/hw/lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 954.816 ; gain = 160.840
+update_compile_order -fileset sources_1
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - BTNs_4Bits
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - LEDs_4Bits
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - SWs_4Bits
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:system_ila:1.0 - system_ila_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_0
+Adding cell -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m04_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m03_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m02_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m01_regslice
+Adding cell -- xilinx.com:ip:axi_register_slice:2.1 - m00_regslice
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Successfully read diagram <system> from BD file <E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1066.859 ; gain = 72.641
+launch_runs synth_1 -jobs 4
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/axi_dma_0/s_axis_s2mm_tlast
+
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+Verilog Output written to : E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hdl/system.v
+Verilog Output written to : E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block BTNs_4Bits .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LEDs_4Bits .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SWs_4Bits .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+Exporting to file e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/hw_handoff/system_system_ila_0_2.hwh
+Generated Block Design Tcl file e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/hw_handoff/system_system_ila_0_2_bd.tcl
+Generated Hardware Definition File e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/hdl/system_system_ila_0_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m04_couplers/m04_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m03_couplers/m03_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/m02_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/m01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m00_couplers/m00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+Exporting to file E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hdl/system.hwdef
+[Mon Jul 10 11:28:33 2017] Launched synth_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1192.477 ; gain = 117.973
+launch_runs impl_1 -jobs 4
+[Mon Jul 10 11:39:15 2017] Launched impl_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/impl_1/runme.log
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI] [get_bd_intf_nets SWs_4Bits_GPIO] [get_bd_cells SWs_4Bits]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M01_AXI] [get_bd_intf_nets BTNs_4Bits_GPIO] [get_bd_cells BTNs_4Bits]
+delete_bd_objs [get_bd_intf_ports SWs_4Bits]
+delete_bd_objs [get_bd_intf_ports BTNs_4Bits]
+save_bd_design
+Wrote  : <E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+startgroup
+set_property -dict [list CONFIG.NUM_MI {3}] [get_bd_cells processing_system7_0_axi_periph]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/processing_system7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+</axi_dma_0/S_AXI_LITE/Reg> is being mapped into </processing_system7_0/Data> at <0x40400000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/processing_system7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins xadc_wiz_0/s_axi_lite]
+</xadc_wiz_0/s_axi_lite/Reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+endgroup
+assign_bd_address
+</LEDs_4Bits/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41200000 [ 64K ]>
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/axi_dma_0/s_axis_s2mm_tlast
+
+validate_bd_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1356.320 ; gain = 29.211
+save_bd_design
+Wrote  : <E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/axi_dma_0/s_axis_s2mm_tlast
+
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+Verilog Output written to : E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hdl/system.v
+Verilog Output written to : E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block LEDs_4Bits .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+Exporting to file e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/hw_handoff/system_system_ila_0_2.hwh
+Generated Block Design Tcl file e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/hw_handoff/system_system_ila_0_2_bd.tcl
+Generated Hardware Definition File e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/hdl/system_system_ila_0_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m02_couplers/m02_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m01_couplers/m01_regslice .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/m00_couplers/m00_regslice .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+Exporting to file E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hdl/system.hwdef
+[Mon Jul 10 13:16:05 2017] Launched synth_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1421.559 ; gain = 29.738
+launch_runs impl_1 -jobs 4
+[Mon Jul 10 13:27:16 2017] Launched impl_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/impl_1/runme.log
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z010clg400-1
+INFO: [Netlist 29-17] Analyzing 925 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_LEDs_4Bits_1/system_LEDs_4Bits_1_board.xdc] for cell 'system_i/LEDs_4Bits/U0'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_LEDs_4Bits_1/system_LEDs_4Bits_1_board.xdc] for cell 'system_i/LEDs_4Bits/U0'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_LEDs_4Bits_1/system_LEDs_4Bits_1.xdc] for cell 'system_i/LEDs_4Bits/U0'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_LEDs_4Bits_1/system_LEDs_4Bits_1.xdc] for cell 'system_i/LEDs_4Bits/U0'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0.xdc] for cell 'system_i/axi_dma_0/U0'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0.xdc] for cell 'system_i/axi_dma_0/U0'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0.xdc] for cell 'system_i/axis_data_fifo_0/inst'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0.xdc] for cell 'system_i/axis_data_fifo_0/inst'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc] for cell 'system_i/xadc_wiz_0/inst'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc] for cell 'system_i/xadc_wiz_0/inst'
+Parsing XDC File [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc]
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[1]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[2]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[3]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btns_4bits_tri_i[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sws_4bits_tri_i[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sws_4bits_tri_i[1]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sws_4bits_tri_i[2]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sws_4bits_tri_i[3]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sws_4bits_tri_i[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RED_O[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RED_O[1]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RED_O[2]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RED_O[3]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RED_O[4]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RED_O[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RED_O[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[1]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[2]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[3]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[4]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[5]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'GREEN_O[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLUE_O[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLUE_O[1]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLUE_O[2]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLUE_O[3]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLUE_O[4]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLUE_O[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BLUE_O[*]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VSYNC_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HSYNC_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VSYNC_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HSYNC_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VSYNC_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HSYNC_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_P'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D0_P'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D1_P'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D2_P'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_*'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D*'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_OEN[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'HDMI_OEN[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC_BCLK[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC_MCLK'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC_MUTE_N[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC_PBLRC[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC_RECLRC[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC_SDATA_O[0]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC_SDATA_I'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AC*'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Could not legally place instance n1_IBUF_inst at N16 (IOB_X0Y57) since it belongs to a shape containing instance system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. The shape requires relative placement between n1_IBUF_inst and system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST that can not be honoured because it would result in an invalid location for system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:76]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Could not legally place instance p1_IBUF_inst at N15 (IOB_X0Y58) since it belongs to a shape containing instance system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. The shape requires relative placement between p1_IBUF_inst and system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST that can not be honoured because it would result in an invalid location for system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:77]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Could not legally place instance n3_IBUF_inst at J16 (IOB_X0Y51) since it belongs to a shape containing instance system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. The shape requires relative placement between n3_IBUF_inst and system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST that can not be honoured because it would result in an invalid location for system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:80]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Could not legally place instance p3_IBUF_inst at K16 (IOB_X0Y52) since it belongs to a shape containing instance system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. The shape requires relative placement between p3_IBUF_inst and system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST that can not be honoured because it would result in an invalid location for system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:81]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Could not legally place instance n4_IBUF_inst at J14 (IOB_X0Y59) since it belongs to a shape containing instance system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. The shape requires relative placement between n4_IBUF_inst and system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST that can not be honoured because it would result in an invalid location for system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:82]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Could not legally place instance p4_IBUF_inst at K14 (IOB_X0Y60) since it belongs to a shape containing instance system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. The shape requires relative placement between p4_IBUF_inst and system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST that can not be honoured because it would result in an invalid location for system_i/xadc_wiz_0/inst/AXI_XADC_CORE_I/XADC_INST. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:83]
+WARNING: [Vivado 12-180] No cells matched 'system_i/axi_dispctrl_0/inst/DONT_USE_BUFR_DIV5.Inst_mmcme2_drp/mmcm_adv_inst'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Timing 38-35] Done setting XDC timing constraints. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:98]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:98]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:98]
+get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2229.125 ; gain = 481.211
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks clk_fpga_2]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:98]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_2'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:99]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:99]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks clk_fpga_2]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:99]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'axi_dispctrl_1_PXL_CLK_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:103]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:103]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks axi_dispctrl_1_PXL_CLK_O]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:103]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'axi_dispctrl_1_PXL_CLK_O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:104]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:104]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks axi_dispctrl_1_PXL_CLK_O]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:104]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched 'system_i/axi_dispctrl_0/inst/DONT_USE_BUFR_DIV5.BUFG_inst/O'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:106]
+CRITICAL WARNING: [Vivado 12-4739] create_generated_clock:No valid object(s) found for '-objects [get_pins system_i/axi_dispctrl_0/inst/DONT_USE_BUFR_DIV5.BUFG_inst/O]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:106]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'vga_pxlclk'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:107]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:107]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_clocks vga_pxlclk]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:107]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'vga_pxlclk'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:108]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:108]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_clocks vga_pxlclk]'. [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc:108]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/constrs_1/new/base.xdc]
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_clocks.xdc] for cell 'system_i/axi_dma_0/U0'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_axi_dma_0_0/system_axi_dma_0_0_clocks.xdc] for cell 'system_i/axi_dma_0/U0'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_clocks.xdc] for cell 'system_i/axi_mem_intercon/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_clocks.xdc] for cell 'system_i/axi_mem_intercon/s01_couplers/auto_us/inst'
+Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_clocks.xdc] for cell 'system_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_clocks.xdc] for cell 'system_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 575 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 568 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+
+open_run: Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 2234.699 ; gain = 734.180
+set_property IOSTANDARD LVCMOS33 [get_ports [list n1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list n3]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list n4]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list n1]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Jul 10 13:43:22 2017] Launched synth_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1/runme.log
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Jul 10 13:52:28 2017] Launched synth_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Mon Jul 10 14:04:01 2017] Launched impl_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Jul 10 14:11:38 2017] Launched synth_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1/runme.log
+[Mon Jul 10 14:11:38 2017] Launched impl_1...
+Run output will be captured here: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 940 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper_board.xdc]
+Finished Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper_board.xdc]
+Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper_early.xdc]
+Finished Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper_early.xdc]
+Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [e:/vivado_hardware_design/xadc_dma/xadc_dma.runs/impl_1/.Xil/Vivado-5240-win-PC/dbg_hub_CV.0/out/xsdbm.xdc:11]
+Finished Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper.xdc]
+Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper_late.xdc]
+Finished Parsing XDC File [E:/vivado_hardware_design/xadc_dma/.Xil/Vivado-9012-win-PC/dcp15/system_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2488.426 ; gain = 19.637
+Restored from archive | CPU: 3.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2488.426 ; gain = 19.637
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 584 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 568 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+  SRLC32E => SRL16E: 3 instances
+
+open_run: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2592.766 ; gain = 195.055
+open_report: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2666.805 ; gain = 48.102
+open_bd_design {E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/system.bd}
+open_hw
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.2
+  **** Build date : Jun 15 2017-18:53:26
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+

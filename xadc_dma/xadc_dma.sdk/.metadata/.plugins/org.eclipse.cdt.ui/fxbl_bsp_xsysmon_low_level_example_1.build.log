@@ -1,0 +1,8 @@
+15:44:07 **** Auto Build of configuration Debug for project fxbl_bsp_xsysmon_low_level_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
+
+15:44:07 Build Finished (took 224ms)
+

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 9 resources" deleteContents="false" description="Delete 9 resources" element1="/device_tree_bsp_0" element2="/fsbl" element3="/fsbl_bsp" element4="/fsbl_debug" element5="/fsbl_debug_bsp" element6="/fsbl_dma" element7="/fsbl_dma_bsp" element8="/system_wrapper_hw_platform_0" element9="/system_wrapper_hw_platform_1" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="9" stamp="1499328967675"/>
-</session>

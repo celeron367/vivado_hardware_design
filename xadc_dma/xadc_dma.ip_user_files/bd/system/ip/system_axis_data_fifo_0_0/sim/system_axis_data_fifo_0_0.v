@@ -59,13 +59,11 @@ module system_axis_data_fifo_0_0 (
   s_axis_tvalid,
   s_axis_tready,
   s_axis_tdata,
-  s_axis_tkeep,
-  s_axis_tlast,
+  s_axis_tid,
   m_axis_tvalid,
   m_axis_tready,
   m_axis_tdata,
-  m_axis_tkeep,
-  m_axis_tlast,
+  m_axis_tid,
   axis_data_count,
   axis_wr_data_count,
   axis_rd_data_count
@@ -80,32 +78,28 @@ input wire s_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *)
 output wire s_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *)
-input wire [31 : 0] s_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TKEEP" *)
-input wire [3 : 0] s_axis_tkeep;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *)
-input wire s_axis_tlast;
+input wire [15 : 0] s_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TID" *)
+input wire [4 : 0] s_axis_tid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
 input wire m_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-output wire [31 : 0] m_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TKEEP" *)
-output wire [3 : 0] m_axis_tkeep;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
-output wire m_axis_tlast;
+output wire [15 : 0] m_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TID" *)
+output wire [4 : 0] m_axis_tid;
 output wire [31 : 0] axis_data_count;
 output wire [31 : 0] axis_wr_data_count;
 output wire [31 : 0] axis_rd_data_count;
 
   axis_data_fifo_v1_1_14_axis_data_fifo #(
     .C_FAMILY("zynq"),
-    .C_AXIS_TDATA_WIDTH(32),
-    .C_AXIS_TID_WIDTH(1),
+    .C_AXIS_TDATA_WIDTH(16),
+    .C_AXIS_TID_WIDTH(5),
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
-    .C_AXIS_SIGNAL_SET('B00000000000000000000000000011011),
+    .C_AXIS_SIGNAL_SET('B00000000000000000000000000100011),
     .C_FIFO_DEPTH(1024),
     .C_FIFO_MODE(1),
     .C_IS_ACLK_ASYNC(0),
@@ -119,10 +113,10 @@ output wire [31 : 0] axis_rd_data_count;
     .s_axis_tvalid(s_axis_tvalid),
     .s_axis_tready(s_axis_tready),
     .s_axis_tdata(s_axis_tdata),
-    .s_axis_tstrb(4'HF),
-    .s_axis_tkeep(s_axis_tkeep),
-    .s_axis_tlast(s_axis_tlast),
-    .s_axis_tid(1'H0),
+    .s_axis_tstrb(2'H3),
+    .s_axis_tkeep(2'H3),
+    .s_axis_tlast(1'H1),
+    .s_axis_tid(s_axis_tid),
     .s_axis_tdest(1'H0),
     .s_axis_tuser(1'H0),
     .m_axis_aclk(1'H0),
@@ -131,9 +125,9 @@ output wire [31 : 0] axis_rd_data_count;
     .m_axis_tready(m_axis_tready),
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tstrb(),
-    .m_axis_tkeep(m_axis_tkeep),
-    .m_axis_tlast(m_axis_tlast),
-    .m_axis_tid(),
+    .m_axis_tkeep(),
+    .m_axis_tlast(),
+    .m_axis_tid(m_axis_tid),
     .m_axis_tdest(),
     .m_axis_tuser(),
     .axis_data_count(axis_data_count),

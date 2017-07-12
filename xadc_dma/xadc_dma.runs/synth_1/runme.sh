@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/vivado_hardware_design/Base_Linux_System_DMA/Base_Linux_System_DMA.runs/synth_1'
+HD_PWD='E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

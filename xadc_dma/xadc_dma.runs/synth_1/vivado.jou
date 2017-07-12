@@ -2,11 +2,11 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Jul  7 15:08:50 2017
-# Process ID: 6128
-# Current directory: E:/vivado_hardware_design/Base_Linux_System_DMA/Base_Linux_System_DMA.runs/synth_1
+# Start of session at: Tue Jul 11 10:51:22 2017
+# Process ID: 10736
+# Current directory: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1
 # Command line: vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
-# Log file: E:/vivado_hardware_design/Base_Linux_System_DMA/Base_Linux_System_DMA.runs/synth_1/system_wrapper.vds
-# Journal file: E:/vivado_hardware_design/Base_Linux_System_DMA/Base_Linux_System_DMA.runs/synth_1\vivado.jou
+# Log file: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1/system_wrapper.vds
+# Journal file: E:/vivado_hardware_design/xadc_dma/xadc_dma.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
