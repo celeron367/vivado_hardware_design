@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Tue Jul 11 12:07:36 2017
+| Date             : Thu Jul 20 14:30:46 2017
 | Host             : win-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.776 |
-| Dynamic (W)              | 1.644 |
-| Device Static (W)        | 0.132 |
+| Total On-Chip Power (W)  | 1.799 |
+| Dynamic (W)              | 1.665 |
+| Device Static (W)        | 0.134 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 64.5  |
-| Junction Temperature (C) | 45.5  |
+| Max Ambient (C)          | 64.2  |
+| Junction Temperature (C) | 45.8  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,22 +49,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.041 |        4 |       --- |             --- |
-| Slice Logic              |     0.005 |    25286 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     7171 |     17600 |           40.74 |
-|   Register               |    <0.001 |    12251 |     35200 |           34.80 |
+| Clocks                   |     0.043 |        4 |       --- |             --- |
+| Slice Logic              |     0.005 |    25944 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     7371 |     17600 |           41.88 |
+|   Register               |    <0.001 |    12554 |     35200 |           35.66 |
 |   LUT as Shift Register  |    <0.001 |     1199 |      6000 |           19.98 |
-|   CARRY4                 |    <0.001 |      326 |      4400 |            7.41 |
+|   CARRY4                 |    <0.001 |      332 |      4400 |            7.55 |
 |   LUT as Distributed RAM |    <0.001 |       42 |      6000 |            0.70 |
-|   F7/F8 Muxes            |    <0.001 |      232 |     17600 |            1.32 |
-|   Others                 |     0.000 |     1706 |       --- |             --- |
-| Signals                  |     0.007 |    17667 |       --- |             --- |
-| Block RAM                |     0.027 |       22 |        60 |           36.67 |
+|   F7/F8 Muxes            |    <0.001 |      286 |     17600 |            1.63 |
+|   Others                 |     0.000 |     1774 |       --- |             --- |
+| Signals                  |     0.008 |    17996 |       --- |             --- |
+| Block RAM                |     0.045 |     39.5 |        60 |           65.83 |
 | I/O                      |     0.002 |       14 |       100 |           14.00 |
 | XADC                     |     0.002 |        1 |       --- |             --- |
 | PS7                      |     1.561 |        1 |       --- |             --- |
-| Static Power             |     0.132 |          |           |                 |
-| Total                    |     1.776 |          |           |                 |
+| Static Power             |     0.134 |          |           |                 |
+| Total                    |     1.799 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.087 |       0.079 |      0.008 |
+| Vccint    |       1.000 |     0.107 |       0.098 |      0.009 |
 | Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +83,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.003 |       0.002 |      0.002 |
+| Vccbram   |       1.000 |     0.006 |       0.003 |      0.003 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -151,7 +151,7 @@ Table of Contents
 +---------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                        | Power (W) |
 +---------------------------------------------------------------------------------------------+-----------+
-| system_wrapper                                                                              |     1.644 |
+| system_wrapper                                                                              |     1.665 |
 |   dbg_hub                                                                                   |     0.002 |
 |     inst                                                                                    |     0.002 |
 |       BSCANID.u_xsdbm_id                                                                    |     0.002 |
@@ -227,6 +227,7 @@ Table of Contents
 |             U_RD_REQ_FLAG                                                                   |    <0.001 |
 |             U_TIMER                                                                         |    <0.001 |
 |           U_XSDB_BUS_MSTR2SL_PORT_IFACE                                                     |    <0.001 |
+|             U_RD_DIN_BUS_MUX                                                                |    <0.001 |
 |         CORE_XSDB.U_ICON                                                                    |    <0.001 |
 |           U_CMD                                                                             |    <0.001 |
 |           U_STAT                                                                            |    <0.001 |
@@ -235,13 +236,15 @@ Table of Contents
 |         SWITCH_N_EXT_BSCAN.bscan_switch                                                     |    <0.001 |
 |   iic_0_scl_iobuf                                                                           |    <0.001 |
 |   iic_0_sda_iobuf                                                                           |    <0.001 |
-|   system_i                                                                                  |     1.640 |
+|   system_i                                                                                  |     1.661 |
 |     LEDs_4Bits                                                                              |    <0.001 |
 |       U0                                                                                    |    <0.001 |
 |         AXI_LITE_IPIF_I                                                                     |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                                |    <0.001 |
 |             I_DECODER                                                                       |    <0.001 |
 |         gpio_core_1                                                                         |    <0.001 |
+|     adc_triger_0                                                                            |    <0.001 |
+|       inst                                                                                  |    <0.001 |
 |     axi_dma_0                                                                               |     0.010 |
 |       U0                                                                                    |     0.010 |
 |         INCLUDE_MM2S_SOF_EOF_GENERATOR.I_MM2S_DMA_MNGR                                      |    <0.001 |
@@ -256,7 +259,7 @@ Table of Contents
 |           GEN_AXI_LITE_IF.AXI_LITE_IF_I                                                     |    <0.001 |
 |           GEN_MM2S_REGISTERS.I_MM2S_DMA_REGISTER                                            |    <0.001 |
 |           GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER                                            |    <0.001 |
-|         I_PRMRY_DATAMOVER                                                                   |     0.008 |
+|         I_PRMRY_DATAMOVER                                                                   |     0.009 |
 |           GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER                                                 |     0.005 |
 |             ENABLE_AXIS_SKID.I_MM2S_SKID_BUF                                                |    <0.001 |
 |             GEN_INCLUDE_MM2S_SF.I_RD_SF                                                     |     0.003 |
@@ -613,22 +616,22 @@ Table of Contents
 |           ACTIVE_LOW_EXT.ACT_LO_EXT                                                         |    <0.001 |
 |         SEQ                                                                                 |    <0.001 |
 |           SEQ_COUNTER                                                                       |    <0.001 |
-|     system_ila_0                                                                            |     0.051 |
-|       inst                                                                                  |     0.051 |
+|     system_ila_0                                                                            |     0.071 |
+|       inst                                                                                  |     0.071 |
 |         g_inst                                                                              |    <0.001 |
 |           inst                                                                              |    <0.001 |
 |             SLOT_0.inst_slot0                                                               |    <0.001 |
 |             SLOT_1.inst_slot0                                                               |    <0.001 |
 |             SLOT_4.inst_slot0                                                               |    <0.001 |
 |             SLOT_5.inst_slot0                                                               |    <0.001 |
-|         ila_lib                                                                             |     0.051 |
-|           inst                                                                              |     0.051 |
-|             ila_core_inst                                                                   |     0.051 |
-|               ila_trace_memory_inst                                                         |     0.022 |
-|                 SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory                               |     0.017 |
-|                   inst_blk_mem_gen                                                          |     0.017 |
-|                     gnbram.gnativebmg.native_blk_mem_gen                                    |     0.017 |
-|                       valid.cstr                                                            |     0.017 |
+|         ila_lib                                                                             |     0.071 |
+|           inst                                                                              |     0.071 |
+|             ila_core_inst                                                                   |     0.071 |
+|               ila_trace_memory_inst                                                         |     0.040 |
+|                 SUBCORE_RAM.BLK_MEM_GEN[0].trace_block_memory                               |     0.032 |
+|                   inst_blk_mem_gen                                                          |     0.032 |
+|                     gnbram.gnativebmg.native_blk_mem_gen                                    |     0.032 |
+|                       valid.cstr                                                            |     0.032 |
 |                         ramloop[0].ram.r                                                    |    <0.001 |
 |                           prim_noinit.ram                                                   |    <0.001 |
 |                         ramloop[10].ram.r                                                   |     0.001 |
@@ -641,7 +644,35 @@ Table of Contents
 |                           prim_noinit.ram                                                   |     0.001 |
 |                         ramloop[14].ram.r                                                   |     0.001 |
 |                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[15].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[16].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[17].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[18].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[19].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
 |                         ramloop[1].ram.r                                                    |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[20].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[21].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[22].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[23].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[24].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[25].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[26].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[27].ram.r                                                   |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[28].ram.r                                                   |     0.001 |
 |                           prim_noinit.ram                                                   |     0.001 |
 |                         ramloop[2].ram.r                                                    |     0.001 |
 |                           prim_noinit.ram                                                   |     0.001 |
@@ -659,17 +690,23 @@ Table of Contents
 |                           prim_noinit.ram                                                   |     0.001 |
 |                         ramloop[9].ram.r                                                    |     0.001 |
 |                           prim_noinit.ram                                                   |     0.001 |
-|                 SUBCORE_RAM.trace_block_memory                                              |     0.004 |
-|                   inst_blk_mem_gen                                                          |     0.004 |
-|                     gnbram.gnativebmg.native_blk_mem_gen                                    |     0.004 |
-|                       valid.cstr                                                            |     0.004 |
-|                         ramloop[0].ram.r                                                    |    <0.001 |
-|                           prim_noinit.ram                                                   |    <0.001 |
+|                 SUBCORE_RAM.trace_block_memory                                              |     0.008 |
+|                   inst_blk_mem_gen                                                          |     0.008 |
+|                     gnbram.gnativebmg.native_blk_mem_gen                                    |     0.008 |
+|                       valid.cstr                                                            |     0.008 |
+|                         ramloop[0].ram.r                                                    |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
 |                         ramloop[1].ram.r                                                    |     0.001 |
 |                           prim_noinit.ram                                                   |     0.001 |
 |                         ramloop[2].ram.r                                                    |     0.001 |
 |                           prim_noinit.ram                                                   |     0.001 |
 |                         ramloop[3].ram.r                                                    |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[4].ram.r                                                    |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[5].ram.r                                                    |     0.001 |
+|                           prim_noinit.ram                                                   |     0.001 |
+|                         ramloop[6].ram.r                                                    |     0.001 |
 |                           prim_noinit.ram                                                   |     0.001 |
 |               u_ila_cap_ctrl                                                                |     0.001 |
 |                 U_CDONE                                                                     |    <0.001 |
@@ -1815,6 +1852,17 @@ Table of Contents
 |         slot_5_b                                                                            |     0.000 |
 |         slot_5_r                                                                            |     0.000 |
 |         slot_5_w                                                                            |     0.000 |
+|     vio_0                                                                                   |    <0.001 |
+|       inst                                                                                  |    <0.001 |
+|         DECODER_INST                                                                        |    <0.001 |
+|         PROBE_IN_INST                                                                       |    <0.001 |
+|         PROBE_OUT_ALL_INST                                                                  |    <0.001 |
+|           G_PROBE_OUT[0].PROBE_OUT0_INST                                                    |    <0.001 |
+|           G_PROBE_OUT[1].PROBE_OUT0_INST                                                    |    <0.001 |
+|           G_PROBE_OUT[2].PROBE_OUT0_INST                                                    |    <0.001 |
+|           G_PROBE_OUT[3].PROBE_OUT0_INST                                                    |    <0.001 |
+|         PROBE_OUT_WIDTH_INST                                                                |    <0.001 |
+|         U_XSDB_SLAVE                                                                        |    <0.001 |
 |     xadc_wiz_0                                                                              |     0.005 |
 |       inst                                                                                  |     0.005 |
 |         AXI_LITE_IPIF_I                                                                     |    <0.001 |

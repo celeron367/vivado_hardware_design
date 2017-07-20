@@ -1,3 +1,4 @@
+ 
 
 -------------------------------------------------------------------------------
 -- system_xadc_wiz_0_0_xadc_core_drp.vhd - entity/architecture pair
@@ -183,6 +184,7 @@ entity system_xadc_wiz_0_0_xadc_core_drp is
      m_axis_tid             : out std_logic_vector(4 downto 0);
      m_axis_tready          : in  std_logic;
      ----------------  sysmon macro interface  -------------------
+     convst_in              : in  STD_LOGIC;                         -- Convert Start Input
      vauxp6                 : in  STD_LOGIC;                         -- Auxiliary Channel 6
      vauxn6                 : in  STD_LOGIC;
      vauxp7                 : in  STD_LOGIC;                         -- Auxiliary Channel 7
@@ -597,6 +599,20 @@ end process CONVST_RST_PROCESS;
   Sysmon_IP2Bus_RdAck <= (drdy_rd_ack_i or local_reg_rdack_final);
 
 
+-------------------------------------------------------------------------------
+-- Starting conversion in event driven mode by using the "convst_reg_input"
+-- register or external CONVST input
+-------------------------------------------------------------------------------
+-- CONV_START_REG_PROCESS: Conversion Start Register (CONVSTR)
+-------------------------------------------------------------------------------
+   CONV_START_REG_PROCESS: process(Bus2IP_Clk) is
+   begin
+       if (Bus2IP_Clk'event and Bus2IP_Clk='1') then
+            convst_d1 <= convst_in;
+       end if;
+   end process CONV_START_REG_PROCESS;
+
+convst_reg <= convst_reg_input or convst_d1;
 
 -------------------------------------------------------------------------------
 -- Bus reset as well as the hard macro register reset
@@ -1107,15 +1123,15 @@ end process mode_change_gen;
 
  XADC_INST : XADC
      generic map(
-        INIT_40 => X"0000", -- config reg 0
+        INIT_40 => X"0200", -- config reg 0
         INIT_41 => X"21AF", -- config reg 1
         INIT_42 => X"0400", -- config reg 2
-        INIT_48 => X"0800", -- Sequencer channel selection
+        INIT_48 => X"0000", -- Sequencer channel selection
         INIT_49 => X"C0C0", -- Sequencer channel selection
         INIT_4A => X"0000", -- Sequencer Average selection
         INIT_4B => X"0000", -- Sequencer Average selection
         INIT_4C => X"0000", -- Sequencer Bipolar selection
-        INIT_4D => X"0000", -- Sequencer Bipolar selection
+        INIT_4D => X"C0C0", -- Sequencer Bipolar selection
         INIT_4E => X"0000", -- Sequencer Acq time selection
         INIT_4F => X"0000", -- Sequencer Acq time selection
         INIT_50 => X"B5ED", -- Temp alarm trigger
@@ -1139,7 +1155,7 @@ end process mode_change_gen;
         )
 
 port map (
-        CONVST              => '0',
+        CONVST              => convst_reg,
         CONVSTCLK           => '0',
         DADDR               => daddr_C(6 downto 0),            --: in (6 downto 0)
         DCLK                => Bus2IP_Clk,         --: in

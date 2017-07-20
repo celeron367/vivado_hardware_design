@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1499738178"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1499738178"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1499738178"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1500531125"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1500531125"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1500531125"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\system_LEDs_4Bits_1\system_LEDs_4Bits_1.xci" Type="IP">
         <Instance HierarchyPath="LEDs_4Bits"/>
@@ -95,6 +95,22 @@
       </File>
       <File Name="ip\system_xadc_wiz_0_0\system_xadc_wiz_0_0.xci" Type="IP">
         <Instance HierarchyPath="xadc_wiz_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\system_adc_triger_0_0\system_adc_triger_0_0.xci" Type="IP">
+        <Instance HierarchyPath="adc_triger_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\system_vio_0_0\system_vio_0_0.xci" Type="IP">
+        <Instance HierarchyPath="vio_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -108,6 +108,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axis_dat
 # IP: bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xadc_wiz_0_0 || ORIG_REF_NAME==system_xadc_wiz_0_0}]
 
+# IP: bd/system/ip/system_adc_triger_0_0/system_adc_triger_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_adc_triger_0_0 || ORIG_REF_NAME==system_adc_triger_0_0}]
+
+# IP: bd/system/ip/system_vio_0_0/system_vio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_vio_0_0 || ORIG_REF_NAME==system_vio_0_0}]
+
 # IP: bd/system/ip/system_m02_regslice_0/system_m02_regslice_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_m02_regslice_0 || ORIG_REF_NAME==system_m02_regslice_0}]
 
@@ -176,6 +182,11 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_xadc_wiz_0_0 || ORIG_REF_NAME==system_xadc_wiz_0_0}] {/inst }]/inst ]]
+
+# XDC: bd/system/ip/system_vio_0_0/system_vio_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_vio_0_0 || ORIG_REF_NAME==system_vio_0_0}]
+
+# XDC: bd/system/ip/system_vio_0_0/system_vio_0_0_ooc.xdc
 
 # XDC: bd/system/ip/system_m02_regslice_0/system_m02_regslice_0_ooc.xdc
 

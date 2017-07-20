@@ -1,7 +1,7 @@
 //arch = zynq; split = false; format = BIN
 the_ROM_image:
 {
-	[bootloader]E:\vivado_hardware_design\xadc_dma\xadc_dma.sdk\fxbl\Debug\fxbl.elf
+	[bootloader]E:\vivado_hardware_design\xadc_dma\xadc_dma.sdk\fsbl\Debug\fsbl.elf
 	E:\vivado_hardware_design\xadc_dma\xadc_dma.sdk\system_wrapper_hw_platform_0\system_wrapper.bit
 	E:\vivado_hardware_design\BootImages\u-boot.elf
 }

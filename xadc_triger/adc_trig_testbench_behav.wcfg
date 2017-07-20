@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="adc_trig_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="adc_trig_testbench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="71000000fs"></ZoomStartTime>
+      <ZoomEndTime time="1445000001fs"></ZoomEndTime>
+      <Cursor1Time time="300000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <ValueColumnWidth column_width="73"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/adc_trig_testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/trig_in" type="logic">
+      <obj_property name="ElementShortName">trig_in</obj_property>
+      <obj_property name="ObjectShortName">trig_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/trig_out" type="logic">
+      <obj_property name="ElementShortName">trig_out</obj_property>
+      <obj_property name="ObjectShortName">trig_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/current_state" type="logic">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/trig_out" type="logic">
+      <obj_property name="ElementShortName">trig_out</obj_property>
+      <obj_property name="ObjectShortName">trig_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/current_state" type="logic">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/trig_in" type="logic">
+      <obj_property name="ElementShortName">trig_in</obj_property>
+      <obj_property name="ObjectShortName">trig_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/trig_out" type="logic">
+      <obj_property name="ElementShortName">trig_out</obj_property>
+      <obj_property name="ObjectShortName">trig_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/t0" type="logic">
+      <obj_property name="ElementShortName">t0</obj_property>
+      <obj_property name="ObjectShortName">t0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/t1" type="logic">
+      <obj_property name="ElementShortName">t1</obj_property>
+      <obj_property name="ObjectShortName">t1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/num_hi" type="array">
+      <obj_property name="ElementShortName">num_hi[7:0]</obj_property>
+      <obj_property name="ObjectShortName">num_hi[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/num_lo" type="array">
+      <obj_property name="ElementShortName">num_lo[7:0]</obj_property>
+      <obj_property name="ObjectShortName">num_lo[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adc_trig_testbench/testtrig/num_pulse" type="array">
+      <obj_property name="ElementShortName">num_pulse[15:0]</obj_property>
+      <obj_property name="ObjectShortName">num_pulse[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

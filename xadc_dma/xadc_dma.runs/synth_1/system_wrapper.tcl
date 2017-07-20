@@ -13,7 +13,11 @@ set_property parent.project_path E:/vivado_hardware_design/xadc_dma/xadc_dma.xpr
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths e:/zybo_base_system/source/vivado/hw/lib [current_project]
+set_property ip_repo_paths {
+  e:/zybo_base_system/source/vivado/hw/lib
+  e:/vivado_hardware_design/xadc_triger
+  e:/vivado_hardware_design/xapp1183/xapp1183/hardware/sources
+} [current_project]
 set_property ip_output_repo e:/vivado_hardware_design/xadc_dma/xadc_dma.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib E:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/hdl/system_wrapper.v
@@ -37,6 +41,8 @@ set_property used_in_implementation false [get_files -all e:/vivado_hardware_des
 set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_vio_0_0/system_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_vio_0_0/system_vio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_m02_regslice_0/system_m02_regslice_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_m01_regslice_0/system_m01_regslice_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/vivado_hardware_design/xadc_dma/xadc_dma.srcs/sources_1/bd/system/ip/system_m00_regslice_0/system_m00_regslice_0_ooc.xdc]

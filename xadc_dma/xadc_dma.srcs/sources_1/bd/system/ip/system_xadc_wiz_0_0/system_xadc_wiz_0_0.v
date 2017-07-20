@@ -1,3 +1,4 @@
+ 
 
 // file: system_xadc_wiz_0_0.v
 // (c) Copyright 2009 - 2013 Xilinx, Inc. All rights reserved.
@@ -47,7 +48,7 @@
 // PART OF THIS FILE AT ALL TIMES.
 `timescale 1ns / 1 ps
 
-(* CORE_GENERATION_INFO = "system_xadc_wiz_0_0,xadc_wiz_v3_3_3,{component_name=system_xadc_wiz_0_0,enable_axi=true,enable_axi4stream=true,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=false,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=false,enable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=on,startup_channel_selection=contineous_sequence}" *)
+(* CORE_GENERATION_INFO = "system_xadc_wiz_0_0,xadc_wiz_v3_3_3,{component_name=system_xadc_wiz_0_0,enable_axi=true,enable_axi4stream=true,dclk_frequency=100,enable_busy=true,enable_convst=true,enable_convstclk=false,enable_dclk=true,enable_drp=false,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=false,enable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=event_driven,channel_averaging=None,sequencer_mode=on,startup_channel_selection=contineous_sequence}" *)
 
 
 module system_xadc_wiz_0_0
@@ -78,6 +79,7 @@ module system_xadc_wiz_0_0
     output m_axis_tvalid,
     output [4 : 0] m_axis_tid,
     input m_axis_tready,
+    input convst_in,                                           
     input vauxp6,                                              
     input vauxn6,                                              
     input vauxp7,                                              
@@ -128,6 +130,7 @@ module system_xadc_wiz_0_0
     .m_axis_tvalid   (m_axis_tvalid),
     .m_axis_tid      (m_axis_tid),
     .m_axis_tready   (m_axis_tready),
+    .convst_in (convst_in), 
     .vauxp6 (vauxp6),
     .vauxn6 (vauxn6),
     .vauxp7 (vauxp7),

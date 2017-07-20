@@ -597,6 +597,7 @@
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_3_AXI_DATA_SEL">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_2_AXI_TRIG_SEL">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_3_AXI_TRIG_SEL">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_DATA_DEPTH">2048</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_NUM_MONITOR_SLOTS">6</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_0_INTF_TYPE">xilinx.com:interface:aximm_rtl:1.0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_SLOT_1_INTF_TYPE">xilinx.com:interface:aximm_rtl:1.0</spirit:configurableElementValue>
@@ -619,6 +620,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="axis_data_fifo" spirit:vendor="xilinx.com" spirit:version="1.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_axis_data_fifo_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="HAS_TLAST">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -626,7 +628,7 @@
         <spirit:componentRef spirit:library="ip" spirit:name="xadc_wiz" spirit:vendor="xilinx.com" spirit:version="3.3"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_xadc_wiz_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="TIMING_MODE">Continuous</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="TIMING_MODE">Event</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="XADC_STARUP_SELECTION">channel_sequencer</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SEQUENCER_MODE">Continuous</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="OT_ALARM">false</spirit:configurableElementValue>
@@ -638,7 +640,7 @@
           <spirit:configurableElementValue spirit:referenceId="ENABLE_VCCDDRO_ALARM">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SINGLE_CHANNEL_SELECTION">TEMPERATURE</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="EXTERNAL_MUX_CHANNEL">VP_VN</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VP_VN">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VP_VN">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VAUXP0_VAUXN0">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VAUXP1_VAUXN1">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VAUXP6_VAUXN6">true</spirit:configurableElementValue>
@@ -647,7 +649,31 @@
           <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VAUXP9_VAUXN9">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VAUXP14_VAUXN14">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CHANNEL_ENABLE_VAUXP15_VAUXN15">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="BIPOLAR_VP_VN">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="BIPOLAR_VAUXP6_VAUXN6">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="BIPOLAR_VAUXP7_VAUXN7">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="BIPOLAR_VAUXP14_VAUXN14">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="BIPOLAR_VAUXP15_VAUXN15">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="ENABLE_AXI4STREAM">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="FIFO_DEPTH">7</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>adc_triger_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="adc_triger" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_adc_triger_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>vio_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="vio" spirit:vendor="xilinx.com" spirit:version="3.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_vio_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE_OUT2_WIDTH">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE_OUT1_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE_OUT0_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_PROBE_OUT">4</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -776,6 +802,8 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M02_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="adc_triger_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="vio_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
@@ -795,6 +823,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="S01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_mem_intercon" spirit:portRef="M00_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="adc_triger_0" spirit:portRef="rst"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ARESETN_1</spirit:name>
@@ -842,6 +871,36 @@
         <spirit:name>vauxp15_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="p4"/>
         <spirit:internalPortReference spirit:componentRef="xadc_wiz_0" spirit:portRef="vauxp15"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>adc_triger_0_trig_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="adc_triger_0" spirit:portRef="trig_out"/>
+        <spirit:internalPortReference spirit:componentRef="xadc_wiz_0" spirit:portRef="convst_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vio_0_probe_out0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vio_0" spirit:portRef="probe_out0"/>
+        <spirit:internalPortReference spirit:componentRef="adc_triger_0" spirit:portRef="num_hi"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vio_0_probe_out1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vio_0" spirit:portRef="probe_out1"/>
+        <spirit:internalPortReference spirit:componentRef="adc_triger_0" spirit:portRef="num_lo"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vio_0_probe_out2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vio_0" spirit:portRef="probe_out2"/>
+        <spirit:internalPortReference spirit:componentRef="adc_triger_0" spirit:portRef="num_pulse"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xadc_wiz_0_channel_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xadc_wiz_0" spirit:portRef="channel_out"/>
+        <spirit:internalPortReference spirit:componentRef="vio_0" spirit:portRef="probe_in0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vio_0_probe_out3</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vio_0" spirit:portRef="probe_out3"/>
+        <spirit:internalPortReference spirit:componentRef="adc_triger_0" spirit:portRef="trig_in"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

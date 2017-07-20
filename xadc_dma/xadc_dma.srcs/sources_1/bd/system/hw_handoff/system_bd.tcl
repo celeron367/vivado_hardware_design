@@ -175,6 +175,9 @@ CONFIG.C_ALL_OUTPUTS {1} \
 CONFIG.C_GPIO_WIDTH {4} \
  ] $LEDs_4Bits
 
+  # Create instance: adc_triger_0, and set properties
+  set adc_triger_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:adc_triger:1.0 adc_triger_0 ]
+
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
   set_property -dict [ list \
@@ -191,6 +194,9 @@ CONFIG.NUM_SI {2} \
 
   # Create instance: axis_data_fifo_0, and set properties
   set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_0 ]
+  set_property -dict [ list \
+CONFIG.HAS_TLAST {1} \
+ ] $axis_data_fifo_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -535,6 +541,8 @@ CONFIG.STRATEGY {1} \
   # Create instance: system_ila_0, and set properties
   set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.0 system_ila_0 ]
   set_property -dict [ list \
+CONFIG.C_BRAM_CNT {39.5} \
+CONFIG.C_DATA_DEPTH {2048} \
 CONFIG.C_MON_TYPE {INTERFACE} \
 CONFIG.C_NUM_MONITOR_SLOTS {6} \
 CONFIG.C_SLOT_0_APC_EN {0} \
@@ -595,9 +603,23 @@ CONFIG.C_SLOT_5_AXI_W_SEL_TRIG {1} \
 CONFIG.C_SLOT_5_INTF_TYPE {xilinx.com:interface:aximm_rtl:1.0} \
  ] $system_ila_0
 
+  # Create instance: vio_0, and set properties
+  set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
+  set_property -dict [ list \
+CONFIG.C_NUM_PROBE_OUT {4} \
+CONFIG.C_PROBE_OUT0_WIDTH {8} \
+CONFIG.C_PROBE_OUT1_WIDTH {8} \
+CONFIG.C_PROBE_OUT2_WIDTH {16} \
+ ] $vio_0
+
   # Create instance: xadc_wiz_0, and set properties
   set xadc_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xadc_wiz:3.3 xadc_wiz_0 ]
   set_property -dict [ list \
+CONFIG.BIPOLAR_VAUXP14_VAUXN14 {true} \
+CONFIG.BIPOLAR_VAUXP15_VAUXN15 {true} \
+CONFIG.BIPOLAR_VAUXP6_VAUXN6 {true} \
+CONFIG.BIPOLAR_VAUXP7_VAUXN7 {true} \
+CONFIG.BIPOLAR_VP_VN {false} \
 CONFIG.CHANNEL_ENABLE_VAUXP0_VAUXN0 {false} \
 CONFIG.CHANNEL_ENABLE_VAUXP14_VAUXN14 {true} \
 CONFIG.CHANNEL_ENABLE_VAUXP15_VAUXN15 {true} \
@@ -606,16 +628,17 @@ CONFIG.CHANNEL_ENABLE_VAUXP6_VAUXN6 {true} \
 CONFIG.CHANNEL_ENABLE_VAUXP7_VAUXN7 {true} \
 CONFIG.CHANNEL_ENABLE_VAUXP8_VAUXN8 {false} \
 CONFIG.CHANNEL_ENABLE_VAUXP9_VAUXN9 {false} \
-CONFIG.CHANNEL_ENABLE_VP_VN {true} \
+CONFIG.CHANNEL_ENABLE_VP_VN {false} \
 CONFIG.ENABLE_AXI4STREAM {true} \
 CONFIG.ENABLE_VCCDDRO_ALARM {false} \
 CONFIG.ENABLE_VCCPAUX_ALARM {false} \
 CONFIG.ENABLE_VCCPINT_ALARM {false} \
 CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+CONFIG.FIFO_DEPTH {7} \
 CONFIG.OT_ALARM {false} \
 CONFIG.SEQUENCER_MODE {Continuous} \
 CONFIG.SINGLE_CHANNEL_SELECTION {TEMPERATURE} \
-CONFIG.TIMING_MODE {Continuous} \
+CONFIG.TIMING_MODE {Event} \
 CONFIG.USER_TEMP_ALARM {false} \
 CONFIG.VCCAUX_ALARM {false} \
 CONFIG.VCCINT_ALARM {false} \
@@ -663,9 +686,10 @@ HDL_ATTRIBUTE.DEBUG {true} \
 
   # Create port connections
   connect_bd_net -net ARESETN_1 [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins LEDs_4Bits/s_axi_aclk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins xadc_wiz_0/s_axi_aclk] [get_bd_pins xadc_wiz_0/s_axis_aclk]
+  connect_bd_net -net adc_triger_0_trig_out [get_bd_pins adc_triger_0/trig_out] [get_bd_pins xadc_wiz_0/convst_in]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins LEDs_4Bits/s_axi_aclk] [get_bd_pins adc_triger_0/clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins vio_0/clk] [get_bd_pins xadc_wiz_0/s_axi_aclk] [get_bd_pins xadc_wiz_0/s_axis_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon/S01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins system_ila_0/resetn] [get_bd_pins xadc_wiz_0/s_axi_aresetn]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins adc_triger_0/rst] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon/S01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins system_ila_0/resetn] [get_bd_pins xadc_wiz_0/s_axi_aresetn]
   connect_bd_net -net vauxn14_1 [get_bd_ports n3] [get_bd_pins xadc_wiz_0/vauxn14]
   connect_bd_net -net vauxn15_1 [get_bd_ports n4] [get_bd_pins xadc_wiz_0/vauxn15]
   connect_bd_net -net vauxn6_1 [get_bd_ports n1] [get_bd_pins xadc_wiz_0/vauxn6]
@@ -674,6 +698,11 @@ HDL_ATTRIBUTE.DEBUG {true} \
   connect_bd_net -net vauxp15_1 [get_bd_ports p4] [get_bd_pins xadc_wiz_0/vauxp15]
   connect_bd_net -net vauxp6_1 [get_bd_ports p1] [get_bd_pins xadc_wiz_0/vauxp6]
   connect_bd_net -net vauxp7_1 [get_bd_ports p2] [get_bd_pins xadc_wiz_0/vauxp7]
+  connect_bd_net -net vio_0_probe_out0 [get_bd_pins adc_triger_0/num_hi] [get_bd_pins vio_0/probe_out0]
+  connect_bd_net -net vio_0_probe_out1 [get_bd_pins adc_triger_0/num_lo] [get_bd_pins vio_0/probe_out1]
+  connect_bd_net -net vio_0_probe_out2 [get_bd_pins adc_triger_0/num_pulse] [get_bd_pins vio_0/probe_out2]
+  connect_bd_net -net vio_0_probe_out3 [get_bd_pins adc_triger_0/trig_in] [get_bd_pins vio_0/probe_out3]
+  connect_bd_net -net xadc_wiz_0_channel_out [get_bd_pins vio_0/probe_in0] [get_bd_pins xadc_wiz_0/channel_out]
 
   # Create address segments
   create_bd_addr_seg -range 0x20000000 -offset 0x00000000 [get_bd_addr_spaces axi_dma_0/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM

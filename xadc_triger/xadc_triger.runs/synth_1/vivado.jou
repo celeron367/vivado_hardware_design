@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Jul 20 10:05:51 2017
+# Process ID: 9956
+# Current directory: E:/vivado_hardware_design/xadc_triger/xadc_triger.runs/synth_1
+# Command line: vivado.exe -log adc_triger.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_triger.tcl
+# Log file: E:/vivado_hardware_design/xadc_triger/xadc_triger.runs/synth_1/adc_triger.vds
+# Journal file: E:/vivado_hardware_design/xadc_triger/xadc_triger.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source adc_triger.tcl -notrace

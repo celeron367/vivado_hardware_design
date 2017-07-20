@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado_hardware_design/xadc_triger/xadc_triger.sim/sim_1/impl/timing/adc_trig_testbench_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_triger
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/vivado_hardware_design/xadc_triger/xadc_triger.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adc_trig_testbench

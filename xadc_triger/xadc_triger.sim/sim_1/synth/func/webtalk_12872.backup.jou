@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Jul 20 10:07:17 2017
+# Process ID: 12872
+# Current directory: E:/vivado_hardware_design/xadc_triger/xadc_triger.sim/sim_1/synth/func
+# Command line: wbtcv.exe -mode batch -source E:/vivado_hardware_design/xadc_triger/xadc_triger.sim/sim_1/synth/func/xsim.dir/adc_trig_testbench_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: E:/vivado_hardware_design/xadc_triger/xadc_triger.sim/sim_1/synth/func/webtalk.log
+# Journal file: E:/vivado_hardware_design/xadc_triger/xadc_triger.sim/sim_1/synth/func\webtalk.jou
+#-----------------------------------------------------------
+source E:/vivado_hardware_design/xadc_triger/xadc_triger.sim/sim_1/synth/func/xsim.dir/adc_trig_testbench_func_synth/webtalk/xsim_webtalk.tcl -notrace

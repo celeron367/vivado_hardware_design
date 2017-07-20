@@ -1,19 +1,9 @@
-13:34:45 INFO  : Registering command handlers for SDK TCF services
-13:34:46 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado_hardware_design\xadc_dma\xadc_dma.sdk\temp_xsdb_launch_script.tcl
-13:34:51 INFO  : XSCT server has started successfully.
-13:34:51 INFO  : Successfully done setting XSCT server connection channel  
-13:34:53 INFO  : Successfully done setting SDK workspace  
-13:34:53 INFO  : Processing command line option -hwspec E:/vivado_hardware_design/xadc_dma/xadc_dma.sdk/system_wrapper.hdf.
-13:40:04 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o E:\vivado_hardware_design\BootImages\xadc\BOOT.BIN
-13:40:04 INFO  : Creating new bif file E:\vivado_hardware_design\BootImages\xadc\output.bif
-13:40:05 INFO  : Bootgen command execution is done.
-13:46:13 INFO  : Example project fxbl_bsp_xsysmon_intr_example_1 has been created successfully.
-15:42:57 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado_hardware_design\xadc_dma\xadc_dma.sdk\temp_xsdb_launch_script.tcl
-15:43:01 INFO  : XSCT server has started successfully.
-15:43:01 INFO  : Successfully done setting XSCT server connection channel  
-15:43:02 INFO  : Successfully done setting SDK workspace  
-15:43:09 INFO  : Registering command handlers for SDK TCF services
-15:43:10 INFO  : Processing command line option -hwspec E:/vivado_hardware_design/xadc_dma/xadc_dma.sdk/system_wrapper.hdf.
-15:43:11 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
-15:43:48 INFO  : Example project fxbl_bsp_xsysmon_low_level_example_1 has been created successfully.
-15:43:49 INFO  : Example project fxbl_bsp_xsysmon_polled_example_1 has been created successfully.
+15:18:15 INFO  : Registering command handlers for SDK TCF services
+15:18:16 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado_hardware_design\xadc_dma\xadc_dma.sdk\temp_xsdb_launch_script.tcl
+15:18:17 INFO  : XSCT server has started successfully.
+15:18:17 INFO  : Successfully done setting XSCT server connection channel  
+15:18:18 INFO  : Successfully done setting SDK workspace  
+15:18:18 INFO  : Processing command line option -hwspec E:/vivado_hardware_design/xadc_dma/xadc_dma.sdk/system_wrapper.hdf.
+15:29:44 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o E:\vivado_hardware_design\BootImages\xadc\BOOT.BIN -w on
+15:29:44 INFO  : Overwriting existing bif file E:\vivado_hardware_design\BootImages\xadc\output.bif
+15:29:46 INFO  : Bootgen command execution is done.

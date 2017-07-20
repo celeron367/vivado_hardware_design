@@ -20,6 +20,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../zybo_base_system/source/vivado/hw/lib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../xadc_triger"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../xapp1183/xapp1183/hardware/sources"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>

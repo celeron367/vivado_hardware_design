@@ -1,3 +1,4 @@
+ 
 
 -------------------------------------------------------------------------------
 -- system_xadc_wiz_0_0_axi_xadc.vhd - entity/architecture pair
@@ -204,6 +205,7 @@ entity system_xadc_wiz_0_0_axi_xadc is
    -- XADC External interface signals
 
     -- Conversion start control signal for Event driven mode
+    convst_in       : in  STD_LOGIC;                         -- Convert Start Input
     vauxp6          : in  STD_LOGIC;                         -- Auxiliary Channel 6
     vauxn6          : in  STD_LOGIC;
     vauxp7          : in  STD_LOGIC;                         -- Auxiliary Channel 7
@@ -296,6 +298,7 @@ component system_xadc_wiz_0_0_xadc_core_drp
      m_axis_tid             : out std_logic_vector(4 downto 0);
      m_axis_tready          : in  std_logic;
      ----------------  sysmon macro interface  -------------------
+     convst_in              : in  STD_LOGIC;                         -- Convert Start Input
      vauxp6                 : in  STD_LOGIC;                         -- Auxiliary Channel 6
      vauxn6                 : in  STD_LOGIC;
      vauxp7                 : in  STD_LOGIC;                         -- Auxiliary Channel 7
@@ -759,6 +762,7 @@ AXI_XADC_CORE_I : system_xadc_wiz_0_0_xadc_core_drp
     m_axis_tid                   => m_axis_tid, 
     m_axis_tready                => m_axis_tready, 
     --- external interface signals ------------------
+    convst_in                    => convst_in,
     vauxp6                       => vauxp6,
     vauxn6                       => vauxn6,
     vauxp7                       => vauxp7,
